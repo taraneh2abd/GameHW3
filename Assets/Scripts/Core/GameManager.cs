@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,8 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int startMissiles = 2;
     [SerializeField] private int maxPowerLevel = 3;
     [SerializeField] private int foodPerMissile = 20;
+    [SerializeField] private float levelCompleteDelay = 2.5f;
+
+    private const string MenuSceneName = "MainMenu";
 
     private bool gameOverRaised;
+    private bool levelTransitioning;
 
     public int LevelIndex { get; private set; }
     public int RoundIndex { get; private set; }
@@ -55,6 +61,24 @@ public class GameManager : MonoBehaviour
         ResetState();
     }
 
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    private static void Bootstrap()
+    {
+        if (Instance != null)
+        {
+            return;
+        }
+
+        GameObject prefab = Resources.Load<GameObject>("GameManager");
+        if (prefab == null)
+        {
+            Debug.LogError("Resources/GameManager prefab is missing.");
+            return;
+        }
+
+        Instantiate(prefab);
+    }
+
     private void OnDestroy()
     {
         if (Instance == this)
@@ -73,6 +97,65 @@ public class GameManager : MonoBehaviour
         PowerLevel = 1;
         FoodMeter = 0;
         gameOverRaised = false;
+        levelTransitioning = false;
+    }
+
+    public void NewGame()
+    {
+        ResetState();
+        SaveSystem.Delete();
+        LoadCurrentLevelScene();
+    }
+
+    public bool ContinueGame()
+    {
+        if (!SaveSystem.TryLoad(out SaveData data))
+        {
+            return false;
+        }
+
+        ResetState();
+        LevelIndex = Mathf.Clamp(data.levelIndex, 0, Mathf.Max(0, levels.Length - 1));
+        RoundIndex = data.roundIndex;
+        Score = data.score;
+        Lives = data.lives;
+        Missiles = data.missiles;
+        PowerLevel = Mathf.Clamp(data.powerLevel, 1, maxPowerLevel);
+        FoodMeter = Mathf.Clamp(data.foodMeter, 0, foodPerMissile - 1);
+
+        LoadCurrentLevelScene();
+        return true;
+    }
+
+    public void CompleteLevel()
+    {
+        if (levelTransitioning || gameOverRaised)
+        {
+            return;
+        }
+
+        levelTransitioning = true;
+        StartCoroutine(CompleteLevelRoutine());
+    }
+
+    public void Retry()
+    {
+        RoundIndex = 0;
+        Lives = startLives;
+        Missiles = startMissiles;
+        PowerLevel = 1;
+        FoodMeter = 0;
+        gameOverRaised = false;
+        levelTransitioning = false;
+        Autosave();
+        LoadCurrentLevelScene();
+    }
+
+    public void ReturnToMenu()
+    {
+        gameOverRaised = false;
+        levelTransitioning = false;
+        SceneManager.LoadScene(MenuSceneName);
     }
 
     public void AddScore(int amount)
@@ -83,7 +166,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseLife()
     {
-        if (gameOverRaised || Lives <= 0)
+        if (gameOverRaised || levelTransitioning || Lives <= 0)
         {
             return;
         }
@@ -166,6 +249,38 @@ public class GameManager : MonoBehaviour
             powerLevel = PowerLevel,
             foodMeter = FoodMeter
         });
+    }
+
+    private IEnumerator CompleteLevelRoutine()
+    {
+        GameEvents.RaiseLevelCompleted(CurrentLevelNumber);
+        yield return new WaitForSecondsRealtime(levelCompleteDelay);
+
+        LevelDataSO next = CurrentLevel != null ? CurrentLevel.NextLevel : null;
+        if (next == null)
+        {
+            SaveSystem.Delete();
+            GameEvents.RaiseVictory();
+            yield break;
+        }
+
+        LevelIndex++;
+        RoundIndex = 0;
+        Autosave();
+        levelTransitioning = false;
+        SceneManager.LoadScene(next.SceneName);
+    }
+
+    private void LoadCurrentLevelScene()
+    {
+        LevelDataSO level = CurrentLevel;
+        if (level == null)
+        {
+            Debug.LogError("No level data for level index " + LevelIndex);
+            return;
+        }
+
+        SceneManager.LoadScene(level.SceneName);
     }
 
     private float NormalizedFood()
