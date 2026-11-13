@@ -26,7 +26,7 @@ public class DropSpawner : MonoBehaviour
 
     public void ClearAll()
     {
-        foreach (Pickup pickup in FindObjectsByType<Pickup>(FindObjectsSortMode.None))
+        foreach (Pickup pickup in FindObjectsByType<Pickup>())
         {
             pickup.Release();
         }

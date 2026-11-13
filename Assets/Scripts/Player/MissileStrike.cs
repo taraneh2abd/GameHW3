@@ -62,7 +62,7 @@ public class MissileStrike : MonoBehaviour
 
     private Vector3 StartPosition(Camera cam)
     {
-        PlayerController player = FindFirstObjectByType<PlayerController>();
+        PlayerController player = FindAnyObjectByType<PlayerController>();
         if (player != null)
         {
             return player.transform.position;
@@ -75,7 +75,7 @@ public class MissileStrike : MonoBehaviour
     {
         List<IScreenClearTarget> targets = new List<IScreenClearTarget>();
 
-        foreach (MonoBehaviour behaviour in FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None))
+        foreach (MonoBehaviour behaviour in FindObjectsByType<MonoBehaviour>())
         {
             if (behaviour is IScreenClearTarget target)
             {
