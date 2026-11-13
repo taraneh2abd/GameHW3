@@ -1254,6 +1254,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8c3e6b75467e67f4aa265162ee36d051, type: 3}
   - {fileID: 8300000, guid: eee0af0de7ee7b14ab75213a8922e088, type: 3}
   - {fileID: 8300000, guid: d7f0fec1c7c11ee4596b765f03c13383, type: 3}
+  uiButtonClip: {fileID: 8300000, guid: 239b6a88ee97cd14d9e087b7cea10c85, type: 3}
+  uiMoveClip: {fileID: 8300000, guid: c9d2afb9d98f9574681031a8af9b5d8f, type: 3}
+  uiSelectClip: {fileID: 8300000, guid: 674132fc7052fd644a06e65e586afd8f, type: 3}
   shotInterval: 0.09
   eggCluckInterval: 0.15
   killCluckInterval: 0.06

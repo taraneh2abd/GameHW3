@@ -26,6 +26,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip bossAlarmClip;
     [SerializeField] private AudioClip bossDefeatedClip;
     [SerializeField] private AudioClip[] cluckClips;
+    [SerializeField] private AudioClip uiButtonClip;
+    [SerializeField] private AudioClip uiMoveClip;
+    [SerializeField] private AudioClip uiSelectClip;
     [SerializeField] private float shotInterval = 0.09f;
     [SerializeField] private float eggCluckInterval = 0.15f;
     [SerializeField] private float killCluckInterval = 0.06f;
@@ -236,6 +239,21 @@ public class AudioManager : MonoBehaviour
 
         LastSfx = clip;
         SfxPlayCount++;
+    }
+
+    public void PlayUiButton()
+    {
+        PlaySfx(uiButtonClip, 0.8f);
+    }
+
+    public void PlayUiMove()
+    {
+        PlaySfx(uiMoveClip, 0.6f);
+    }
+
+    public void PlayUiSelect()
+    {
+        PlaySfx(uiSelectClip, 0.8f);
     }
 
     private void StartClip(AudioClip clip)
