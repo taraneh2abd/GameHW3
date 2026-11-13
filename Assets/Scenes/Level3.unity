@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 95106783}
   - component: {fileID: 95106782}
   - component: {fileID: 95106781}
+  - component: {fileID: 95106784}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -372,6 +373,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &95106784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95106780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2424985b5a08ab24aab5ba7910c42e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::CameraShake
+  maxOffset: 0.5
+  frequency: 24
+  decayPerSecond: 1.8
+  playerHitTrauma: 0.4
+  missileTrauma: 0.65
+  bossDefeatedTrauma: 1
+  bossHitTrauma: 0.15
 --- !u!1 &302904397
 GameObject:
   m_ObjectHideFlags: 0
