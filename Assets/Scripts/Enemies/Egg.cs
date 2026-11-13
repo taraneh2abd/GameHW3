@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class Egg : MonoBehaviour, IDamageable
+public class Egg : MonoBehaviour, IDamageable, IScreenClearTarget
 {
     [SerializeField] private float fallSpeed = 4f;
     [SerializeField] private float bottomMargin = 0.3f;
@@ -56,6 +56,11 @@ public class Egg : MonoBehaviour, IDamageable
         {
             Release();
         }
+    }
+
+    public void OnScreenClear()
+    {
+        Release();
     }
 
     public void Release()
