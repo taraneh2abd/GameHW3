@@ -44,6 +44,10 @@ public class ChickenMover : MonoBehaviour
         {
             FollowPath();
         }
+        else if (State == ChickenState.InFormation)
+        {
+            transform.position = slot + Vector3.right * Formation.SwayOffset;
+        }
     }
 
     private void FollowPath()
