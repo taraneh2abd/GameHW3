@@ -8,6 +8,7 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     [SerializeField] private int scoreValue = 5000;
     [SerializeField] private float missileMinFraction = 0.15f;
     [SerializeField] private float missileMaxFraction = 0.2f;
+    [SerializeField] private float secondPhaseThreshold = 0.65f;
 
     [SerializeField] private float hoverTopOffset = 2.4f;
     [SerializeField] private float sideMargin = 2.5f;
@@ -20,6 +21,10 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     [SerializeField] private float fireInterval = 1.5f;
     [SerializeField] private int fanCount = 3;
     [SerializeField] private float fanSpread = 15f;
+    [SerializeField] private float sweepSpeed = 4f;
+    [SerializeField] private float curtainInterval = 0.8f;
+    [SerializeField] private float curtainSpacing = 1.4f;
+    [SerializeField] private float chargeSpeed = 9f;
 
     [SerializeField] private SpriteAnimator henAnimator;
     [SerializeField] private Sprite[] idleFrames;
@@ -38,17 +43,21 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
 
     private BossEnterState enterState;
     private BossBarrageState barrageState;
+    private BossSweepState sweepState;
+    private BossChargeState chargeState;
 
     private Camera cam;
     private PlayerHealth player;
     private Collider2D body;
     private SpriteRenderer[] renderers;
+    private Color[] baseColors;
     private Coroutine hitRoutine;
     private int health;
     private int hoverDirection;
     private bool entered;
     private bool dead;
     private bool stopped;
+    private bool nextIsSweep;
 
     public string BossName => bossName;
     public int Health => health;
@@ -65,6 +74,10 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     public float FireInterval => fireInterval;
     public int FanCount => fanCount;
     public float FanSpread => fanSpread;
+    public float SweepSpeed => sweepSpeed;
+    public float CurtainInterval => curtainInterval;
+    public float CurtainSpacing => curtainSpacing;
+    public float ChargeSpeed => chargeSpeed;
     public float ExplosionInterval => explosionInterval;
     public float DeathDuration => deathDuration;
 
@@ -86,6 +99,7 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
 
     public float CenterX => Cam.transform.position.x;
     public float HoverY => Cam.transform.position.y + HalfHeight - hoverTopOffset;
+    public float TopY => Cam.transform.position.y + HalfHeight;
     public float BottomY => Cam.transform.position.y - HalfHeight;
     public float MinX => CenterX - Mathf.Max(0f, HalfWidth - sideMargin);
     public float MaxX => CenterX + Mathf.Max(0f, HalfWidth - sideMargin);
@@ -115,9 +129,16 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         hoverDirection = Random.value < 0.5f ? -1 : 1;
 
         renderers = GetComponentsInChildren<SpriteRenderer>();
+        baseColors = new Color[renderers.Length];
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            baseColors[i] = renderers[i].color;
+        }
 
         enterState = new BossEnterState(this);
         barrageState = new BossBarrageState(this);
+        sweepState = new BossSweepState(this);
+        chargeState = new BossChargeState(this);
     }
 
     private void Start()
@@ -183,7 +204,12 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     {
         entered = true;
         GameEvents.RaiseBossSpawned(bossName, maxHealth);
-        machine.ChangeState(barrageState);
+        NextAttack();
+    }
+
+    public void NextAttack()
+    {
+        machine.ChangeState(NextAttackState());
     }
 
     public void FireFan(int count, float spread, float speed)
@@ -205,6 +231,33 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         VolleysFired++;
     }
 
+    public void FireCurtain(float gapX, float gapHalfWidth, float speed)
+    {
+        float left = CenterX - HalfWidth + curtainSpacing * 0.5f;
+        float right = CenterX + HalfWidth;
+        float y = TopY - 0.2f;
+
+        for (float x = left; x < right; x += curtainSpacing)
+        {
+            if (Mathf.Abs(x - gapX) <= gapHalfWidth)
+            {
+                continue;
+            }
+
+            Fire(1, new Vector3(x, y, 0f), Vector2.down, speed);
+        }
+
+        VolleysFired++;
+    }
+
+    public void SetAlert(bool on)
+    {
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            renderers[i].color = on ? Color.Lerp(baseColors[i], Color.red, 0.6f) : baseColors[i];
+        }
+    }
+
     public void BeginDeath()
     {
         if (hitRoutine != null)
@@ -213,6 +266,7 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
             hitRoutine = null;
         }
 
+        SetAlert(false);
         PlayHenAnimation(diedFrames, false);
     }
 
@@ -243,6 +297,17 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         Destroy(gameObject);
     }
 
+    private BossState NextAttackState()
+    {
+        if (HealthFraction <= secondPhaseThreshold)
+        {
+            nextIsSweep = !nextIsSweep;
+            return nextIsSweep ? (BossState)sweepState : chargeState;
+        }
+
+        return barrageState;
+    }
+
     private void ApplyDamage(int amount)
     {
         if (dead || !entered || amount <= 0)
@@ -265,6 +330,15 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         }
 
         hitRoutine = StartCoroutine(HitRoutine());
+        EvaluatePhase();
+    }
+
+    private void EvaluatePhase()
+    {
+        if (HealthFraction <= secondPhaseThreshold && machine.Current == barrageState)
+        {
+            machine.ChangeState(NextAttackState());
+        }
     }
 
     private void Die()
