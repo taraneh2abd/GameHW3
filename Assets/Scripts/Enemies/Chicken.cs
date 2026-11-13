@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteAnimator))]
-public class Chicken : MonoBehaviour, IDamageable
+public class Chicken : MonoBehaviour, IDamageable, IScreenClearTarget
 {
     [SerializeField] private int maxHealth = 1;
     [SerializeField] private int scoreValue = 100;
@@ -69,6 +69,14 @@ public class Chicken : MonoBehaviour, IDamageable
         }
 
         hurtRoutine = StartCoroutine(HurtRoutine());
+    }
+
+    public void OnScreenClear()
+    {
+        if (IsAlive)
+        {
+            Die();
+        }
     }
 
     private void Play(Sprite[] frames)

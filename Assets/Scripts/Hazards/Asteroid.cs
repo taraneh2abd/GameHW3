@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(SpriteAnimator))]
-public class Asteroid : MonoBehaviour, IDamageable
+public class Asteroid : MonoBehaviour, IDamageable, IScreenClearTarget
 {
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private int scoreValue = 50;
@@ -80,6 +80,14 @@ public class Asteroid : MonoBehaviour, IDamageable
         health -= amount;
 
         if (health <= 0)
+        {
+            StartCoroutine(ExplodeRoutine());
+        }
+    }
+
+    public void OnScreenClear()
+    {
+        if (IsAlive)
         {
             StartCoroutine(ExplodeRoutine());
         }
