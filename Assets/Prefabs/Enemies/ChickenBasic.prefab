@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 575959430795116186}
   - component: {fileID: 6553067758368931253}
   - component: {fileID: 6984336682310032220}
+  - component: {fileID: 9101522379184911934}
   m_Layer: 8
   m_Name: ChickenBasic
   m_TagString: Untagged
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1130ef1933578b44aacade1f9fd069f5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteAnimator
+  m_EditorClassIdentifier: Game::SpriteAnimator
   frames:
   - {fileID: -7941936156974729709, guid: 2324650bec8986447a72286e86071feb, type: 3}
   - {fileID: 7365515590398028723, guid: 2324650bec8986447a72286e86071feb, type: 3}
@@ -199,7 +200,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4597a368bef4cdc4b85c2c70b8af23f0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Chicken
+  m_EditorClassIdentifier: Game::Chicken
   maxHealth: 1
   scoreValue: 100
   animationFps: 6
@@ -224,3 +225,15 @@ MonoBehaviour:
   - {fileID: -7172223224738548916, guid: a18e9f8519b83e148b437a0cc9307424, type: 3}
   - {fileID: -288785966529125055, guid: a18e9f8519b83e148b437a0cc9307424, type: 3}
   - {fileID: -5391498105722110960, guid: a18e9f8519b83e148b437a0cc9307424, type: 3}
+--- !u!114 &9101522379184911934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4514187339210715870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec3a78b3fcc70f439baa55fed71a42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::ChickenMover
