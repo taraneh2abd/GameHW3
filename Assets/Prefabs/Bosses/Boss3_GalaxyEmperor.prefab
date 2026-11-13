@@ -92,7 +92,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 46337caa9bdfb1c429c5de434e5f8d19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 46337caa9bdfb1c429c5de434e5f8d19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 5982402731028881178}
   - component: {fileID: 9121440659081713989}
   - component: {fileID: 5312740315933005385}
+  - component: {fileID: 3452648386376028858}
   m_Layer: 8
   m_Name: Boss3_GalaxyEmperor
   m_TagString: Untagged
@@ -456,6 +457,19 @@ MonoBehaviour:
   explosionInterval: 0.12
   explosionSpread: {x: 2.5, y: 2.5}
   deathDuration: 2
+--- !u!114 &3452648386376028858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864754581407503175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a1f98c285b7204c893562a636e708b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::HitFlash
+  duration: 0.08
 --- !u!1 &6657286513106212987
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +528,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 46337caa9bdfb1c429c5de434e5f8d19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -17,8 +17,7 @@ MonoBehaviour:
   music: {fileID: 8300000, guid: f9650ed22088bf342ae688af91c80f5f, type: 3}
   theme:
     displayName: Asteroid Belt
-    backgroundTint: {r: 1, g: 1, b: 1, a: 1}
-    parallaxLayers: []
+    backgroundPrefab: {fileID: 5981312129695933413, guid: 166167d4bf07fcf4eaba8d0f01f68b62, type: 3}
   rounds:
   - type: 0
     wave: {fileID: 11400000, guid: 5d32ae43ee88f274b86c3e6c6647d092, type: 2}

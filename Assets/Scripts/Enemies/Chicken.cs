@@ -15,6 +15,7 @@ public class Chicken : MonoBehaviour, IDamageable, IScreenClearTarget
     [SerializeField] private Sprite[] angryFrames;
 
     private SpriteAnimator animator;
+    private HitFlash hitFlash;
     private Sprite[] currentFrames;
     private int health;
     private Coroutine hurtRoutine;
@@ -29,6 +30,7 @@ public class Chicken : MonoBehaviour, IDamageable, IScreenClearTarget
     private void Awake()
     {
         animator = GetComponent<SpriteAnimator>();
+        hitFlash = GetComponent<HitFlash>();
         health = maxHealth;
         currentFrames = idleFrames;
     }
@@ -61,6 +63,11 @@ public class Chicken : MonoBehaviour, IDamageable, IScreenClearTarget
         {
             Die();
             return;
+        }
+
+        if (hitFlash != null)
+        {
+            hitFlash.Flash();
         }
 
         if (hurtRoutine != null)

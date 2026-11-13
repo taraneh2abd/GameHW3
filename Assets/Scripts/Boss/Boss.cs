@@ -64,6 +64,7 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     private Camera cam;
     private PlayerHealth player;
     private Collider2D body;
+    private HitFlash hitFlash;
     private SpriteRenderer[] renderers;
     private Color[] baseColors;
     private Coroutine hitRoutine;
@@ -153,6 +154,7 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     {
         health = maxHealth;
         body = GetComponent<Collider2D>();
+        hitFlash = GetComponent<HitFlash>();
         hoverDirection = Random.value < 0.5f ? -1 : 1;
 
         renderers = GetComponentsInChildren<SpriteRenderer>();
@@ -397,6 +399,11 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         {
             Die();
             return;
+        }
+
+        if (hitFlash != null)
+        {
+            hitFlash.Flash();
         }
 
         if (hitRoutine != null)

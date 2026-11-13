@@ -17,8 +17,10 @@ public static class GameEvents
     public static event Action PlayerDied;
     public static event Action<Vector3> EnemyKilled;
     public static event Action EggDropped;
+    public static event Action<Vector3> EggBroken;
     public static event Action PickupCollected;
     public static event Action MissileLaunched;
+    public static event Action<Vector3> MissileDetonated;
     public static event Action GameOver;
     public static event Action Victory;
 
@@ -36,8 +38,10 @@ public static class GameEvents
     public static void RaisePlayerDied() => PlayerDied?.Invoke();
     public static void RaiseEnemyKilled(Vector3 position) => EnemyKilled?.Invoke(position);
     public static void RaiseEggDropped() => EggDropped?.Invoke();
+    public static void RaiseEggBroken(Vector3 position) => EggBroken?.Invoke(position);
     public static void RaisePickupCollected() => PickupCollected?.Invoke();
     public static void RaiseMissileLaunched() => MissileLaunched?.Invoke();
+    public static void RaiseMissileDetonated(Vector3 position) => MissileDetonated?.Invoke(position);
     public static void RaiseGameOver() => GameOver?.Invoke();
     public static void RaiseVictory() => Victory?.Invoke();
 
@@ -58,8 +62,10 @@ public static class GameEvents
         PlayerDied = null;
         EnemyKilled = null;
         EggDropped = null;
+        EggBroken = null;
         PickupCollected = null;
         MissileLaunched = null;
+        MissileDetonated = null;
         GameOver = null;
         Victory = null;
     }

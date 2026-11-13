@@ -5,10 +5,8 @@ using UnityEngine;
 public class LevelTheme
 {
     [SerializeField] private string displayName;
-    [SerializeField] private Color backgroundTint = Color.white;
-    [SerializeField] private Sprite[] parallaxLayers;
+    [SerializeField] private GameObject backgroundPrefab;
 
     public string DisplayName => displayName;
-    public Color BackgroundTint => backgroundTint;
-    public Sprite[] ParallaxLayers => parallaxLayers;
+    public GameObject BackgroundPrefab => backgroundPrefab;
 }
