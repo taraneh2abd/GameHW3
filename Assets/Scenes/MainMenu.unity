@@ -1627,7 +1627,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 88
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
@@ -1655,6 +1655,7 @@ GameObject:
   - component: {fileID: 633292194}
   - component: {fileID: 633292193}
   - component: {fileID: 633292195}
+  - component: {fileID: 633292196}
   m_Layer: 0
   m_Name: NewGameButton
   m_TagString: Untagged
@@ -1764,6 +1765,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &633292196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633292191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &644747900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789940858}
   - component: {fileID: 789940857}
+  - component: {fileID: 789940859}
   m_Layer: 0
   m_Name: SfxSlider
   m_TagString: Untagged
@@ -2398,6 +2413,19 @@ RectTransform:
   m_AnchoredPosition: {x: 190, y: -390}
   m_SizeDelta: {x: 480, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &789940859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789940856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &851420241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,6 +3147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1211748669}
   - component: {fileID: 1211748670}
+  - component: {fileID: 1211748671}
   m_Layer: 0
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -3199,6 +3228,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1211748671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211748668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &1256148092
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,6 +3253,7 @@ GameObject:
   - component: {fileID: 1256148095}
   - component: {fileID: 1256148094}
   - component: {fileID: 1256148096}
+  - component: {fileID: 1256148097}
   m_Layer: 0
   m_Name: QuitButton
   m_TagString: Untagged
@@ -3320,6 +3363,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1256148097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256148092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &1282004010
 GameObject:
   m_ObjectHideFlags: 0
@@ -4991,6 +5047,7 @@ GameObject:
   - component: {fileID: 2071924238}
   - component: {fileID: 2071924237}
   - component: {fileID: 2071924239}
+  - component: {fileID: 2071924240}
   m_Layer: 0
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -5100,6 +5157,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2071924240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071924235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &2082145619
 GameObject:
   m_ObjectHideFlags: 0

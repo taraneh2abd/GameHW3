@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 2539619858961070084}
   - component: {fileID: 8005398377405000366}
   - component: {fileID: 4434116870252907681}
+  - component: {fileID: 6385966027495810343}
   m_Layer: 0
   m_Name: MenuButton
   m_TagString: Untagged
@@ -380,6 +381,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6385966027495810343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326209940223217877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &1363606550493425078
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1034,7 @@ GameObject:
   - component: {fileID: 5700965174806308430}
   - component: {fileID: 9021349158526868515}
   - component: {fileID: 1500391615508112251}
+  - component: {fileID: 8753653604908537497}
   m_Layer: 0
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -1129,6 +1144,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8753653604908537497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493699074728813264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &2564992158148217729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1860,7 @@ GameObject:
   - component: {fileID: 8897554200203537027}
   - component: {fileID: 3290280136844855103}
   - component: {fileID: 4055704853685721387}
+  - component: {fileID: 2886422560794851648}
   m_Layer: 0
   m_Name: RetryButton
   m_TagString: Untagged
@@ -1941,6 +1970,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2886422560794851648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807322132919730387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &4927096061626720003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,6 +1995,7 @@ GameObject:
   - component: {fileID: 4998332056856604586}
   - component: {fileID: 4976077333153339021}
   - component: {fileID: 8190825800138708683}
+  - component: {fileID: 1388844596946502236}
   m_Layer: 0
   m_Name: MenuButton
   m_TagString: Untagged
@@ -2062,6 +2105,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1388844596946502236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927096061626720003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &5567213582661931292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2205,7 @@ GameObject:
   - component: {fileID: 5132513879369852041}
   - component: {fileID: 3354290649015139422}
   - component: {fileID: 6523715455754910992}
+  - component: {fileID: 824303170728869769}
   m_Layer: 0
   m_Name: MenuButton
   m_TagString: Untagged
@@ -2258,6 +2315,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &824303170728869769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682764330570990025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8ae080f77dbce45bfc1a67832c4e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiSound
+  selectGraceTime: 0.2
 --- !u!1 &5783738149449535269
 GameObject:
   m_ObjectHideFlags: 0
