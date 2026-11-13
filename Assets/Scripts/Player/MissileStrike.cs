@@ -48,6 +48,7 @@ public class MissileStrike : MonoBehaviour
         Destroy(missile);
 
         GameObject blast = Instantiate(blastPrefab, target, Quaternion.identity);
+        GameEvents.RaiseMissileDetonated(target);
         ClearScreen();
 
         SpriteAnimator animator = blast.GetComponent<SpriteAnimator>();
