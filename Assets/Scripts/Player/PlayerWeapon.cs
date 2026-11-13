@@ -30,7 +30,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Update()
     {
-        if (!inputReader.FireHeld || Time.time < nextFireTime)
+        if (Time.timeScale <= 0f || !inputReader.FireHeld || Time.time < nextFireTime)
         {
             return;
         }
@@ -93,6 +93,11 @@ public class PlayerWeapon : MonoBehaviour
 
     private void HandleMissilePressed()
     {
+        if (Time.timeScale <= 0f)
+        {
+            return;
+        }
+
         if (GameManager.Instance != null && GameManager.Instance.TryUseMissile())
         {
             GameEvents.RaiseMissileLaunched();
