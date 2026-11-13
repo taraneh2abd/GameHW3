@@ -13,6 +13,19 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip bossMusic2;
     [SerializeField] private AudioClip endingMusic;
     [SerializeField] private int secondBossLevel = 3;
+    [SerializeField] private AudioClip[] shotClips;
+    [SerializeField] private AudioClip missileLaunchClip;
+    [SerializeField] private AudioClip missileBlastClip;
+    [SerializeField] private AudioClip[] killClips;
+    [SerializeField] private AudioClip playerHitClip;
+    [SerializeField] private AudioClip pickupClip;
+    [SerializeField] private AudioClip powerUpClip;
+    [SerializeField] private AudioClip missileUpClip;
+    [SerializeField] private AudioClip levelCompleteClip;
+    [SerializeField] private AudioClip gameOverClip;
+    [SerializeField] private AudioClip bossAlarmClip;
+    [SerializeField] private AudioClip bossDefeatedClip;
+    [SerializeField] private float shotInterval = 0.09f;
     [SerializeField] private float fadeTime = 0.6f;
 
     private const string MenuSceneName = "MainMenu";
@@ -23,6 +36,9 @@ public class AudioManager : MonoBehaviour
     private float fadeTarget;
     private bool musicActive;
     private AudioClip pendingClip;
+    private float nextShotTime;
+    private int lastPowerLevel = 1;
+    private int lastMissiles;
 
     public AudioClip CurrentMusic { get; private set; }
     public AudioClip LastSfx { get; private set; }
@@ -88,6 +104,16 @@ public class AudioManager : MonoBehaviour
         GameEvents.BossSpawned += HandleBossSpawned;
         GameEvents.Victory += HandleVictory;
         GameEvents.GameOver += HandleGameOver;
+        GameEvents.PlayerFired += HandlePlayerFired;
+        GameEvents.MissileLaunched += HandleMissileLaunched;
+        GameEvents.MissileDetonated += HandleMissileDetonated;
+        GameEvents.EnemyKilled += HandleEnemyKilled;
+        GameEvents.PlayerHit += HandlePlayerHit;
+        GameEvents.PickupCollected += HandlePickupCollected;
+        GameEvents.PowerLevelChanged += HandlePowerLevelChanged;
+        GameEvents.MissilesChanged += HandleMissilesChanged;
+        GameEvents.LevelCompleted += HandleLevelCompleted;
+        GameEvents.BossDefeated += HandleBossDefeated;
     }
 
     private void OnDisable()
@@ -102,6 +128,16 @@ public class AudioManager : MonoBehaviour
         GameEvents.BossSpawned -= HandleBossSpawned;
         GameEvents.Victory -= HandleVictory;
         GameEvents.GameOver -= HandleGameOver;
+        GameEvents.PlayerFired -= HandlePlayerFired;
+        GameEvents.MissileLaunched -= HandleMissileLaunched;
+        GameEvents.MissileDetonated -= HandleMissileDetonated;
+        GameEvents.EnemyKilled -= HandleEnemyKilled;
+        GameEvents.PlayerHit -= HandlePlayerHit;
+        GameEvents.PickupCollected -= HandlePickupCollected;
+        GameEvents.PowerLevelChanged -= HandlePowerLevelChanged;
+        GameEvents.MissilesChanged -= HandleMissilesChanged;
+        GameEvents.LevelCompleted -= HandleLevelCompleted;
+        GameEvents.BossDefeated -= HandleBossDefeated;
     }
 
     private void OnDestroy()
@@ -116,6 +152,7 @@ public class AudioManager : MonoBehaviour
     {
         if (Instance == this)
         {
+            SyncCounters();
             PlayMusicForScene(SceneManager.GetActiveScene());
         }
     }
@@ -173,7 +210,7 @@ public class AudioManager : MonoBehaviour
         fadeTarget = 0f;
     }
 
-    public void PlaySfx(AudioClip clip, float volumeScale = 1f, float pitchVariation = 0f)
+    public void PlaySfx(AudioClip clip, float volumeScale = 1f, float pitchVariation = 0f, float basePitch = 1f)
     {
         if (clip == null || sfxSources.Length == 0)
         {
@@ -186,7 +223,7 @@ public class AudioManager : MonoBehaviour
 
         source.Stop();
         source.clip = clip;
-        source.pitch = 1f + Random.Range(-pitchVariation, pitchVariation);
+        source.pitch = basePitch + Random.Range(-pitchVariation, pitchVariation);
         source.volume = GameSettings.SfxVolume * volumeScale;
         source.Play();
 
@@ -213,7 +250,15 @@ public class AudioManager : MonoBehaviour
 
     private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        SyncCounters();
         PlayMusicForScene(scene);
+    }
+
+    private void SyncCounters()
+    {
+        GameManager state = GameManager.Instance;
+        lastPowerLevel = state != null ? state.PowerLevel : 1;
+        lastMissiles = state != null ? state.Missiles : 0;
     }
 
     private void PlayMusicForScene(Scene scene)
@@ -233,6 +278,7 @@ public class AudioManager : MonoBehaviour
 
     private void HandleBossSpawned(string bossName, int maxHealth)
     {
+        PlaySfx(bossAlarmClip);
         GameManager manager = GameManager.Instance;
         int levelNumber = manager != null && manager.CurrentLevel != null ? manager.CurrentLevel.LevelNumber : 1;
         PlayMusic(levelNumber >= secondBossLevel ? bossMusic2 : bossMusic1);
@@ -246,5 +292,82 @@ public class AudioManager : MonoBehaviour
     private void HandleGameOver()
     {
         StopMusic();
+        PlaySfx(gameOverClip);
+    }
+
+    private void HandlePlayerFired()
+    {
+        if (Time.unscaledTime < nextShotTime)
+        {
+            return;
+        }
+
+        nextShotTime = Time.unscaledTime + shotInterval;
+        PlaySfx(RandomClip(shotClips), 0.5f, 0.08f);
+    }
+
+    private void HandleMissileLaunched()
+    {
+        PlaySfx(missileLaunchClip, 0.9f, 0f, 0.6f);
+    }
+
+    private void HandleMissileDetonated(Vector3 position)
+    {
+        PlaySfx(missileBlastClip);
+    }
+
+    private void HandleEnemyKilled(Vector3 position)
+    {
+        PlaySfx(RandomClip(killClips), 0.6f, 0.1f);
+    }
+
+    private void HandlePlayerHit()
+    {
+        PlaySfx(playerHitClip);
+    }
+
+    private void HandlePickupCollected()
+    {
+        PlaySfx(pickupClip, 0.8f);
+    }
+
+    private void HandlePowerLevelChanged(int level)
+    {
+        if (level > lastPowerLevel)
+        {
+            PlaySfx(powerUpClip);
+        }
+
+        lastPowerLevel = level;
+    }
+
+    private void HandleMissilesChanged(int missiles)
+    {
+        if (missiles > lastMissiles)
+        {
+            PlaySfx(missileUpClip);
+        }
+
+        lastMissiles = missiles;
+    }
+
+    private void HandleLevelCompleted(int levelNumber)
+    {
+        PlaySfx(levelCompleteClip);
+    }
+
+    private void HandleBossDefeated()
+    {
+        PlaySfx(bossDefeatedClip);
+    }
+
+    private static AudioClip RandomClip(AudioClip[] clips)
+    {
+        if (clips == null || clips.Length == 0)
+        {
+            return null;
+        }
+
+        return clips[Random.Range(0, clips.Length)];
     }
 }

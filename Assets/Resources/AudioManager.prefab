@@ -1233,6 +1233,24 @@ MonoBehaviour:
   bossMusic2: {fileID: 8300000, guid: 600caf5232efe3040950eb9d46041ba3, type: 3}
   endingMusic: {fileID: 8300000, guid: 0e6ea9d82f68e2a49a3a7894cd66c9e0, type: 3}
   secondBossLevel: 3
+  shotClips:
+  - {fileID: 8300000, guid: e857a6a01abeee0498490460d59693e2, type: 3}
+  - {fileID: 8300000, guid: 569b02dbea38913488957c4f5252bcdc, type: 3}
+  missileLaunchClip: {fileID: 8300000, guid: 1880d16ca91691640941f68bfd05487b, type: 3}
+  missileBlastClip: {fileID: 8300000, guid: a67754d1ea9870844bddfa190c727893, type: 3}
+  killClips:
+  - {fileID: 8300000, guid: 4500b6b6dec1f7e45aeef782b390c20f, type: 3}
+  - {fileID: 8300000, guid: 081b9beb9456fd04ab2faf866cd2748d, type: 3}
+  - {fileID: 8300000, guid: d1f536b8bb1dca54685b610c1ab6bdb1, type: 3}
+  playerHitClip: {fileID: 8300000, guid: fcd23db71546b8d4dbd97f259c4c956e, type: 3}
+  pickupClip: {fileID: 8300000, guid: 3150cfd96a752cf46b9e58a9d8302c06, type: 3}
+  powerUpClip: {fileID: 8300000, guid: 0404f8e8b647b1d4aaa114e1e38c7e73, type: 3}
+  missileUpClip: {fileID: 8300000, guid: e0c3d1871af19194aa576a0a65fd805f, type: 3}
+  levelCompleteClip: {fileID: 8300000, guid: 672600fce1f761b4eb12d610bd62b939, type: 3}
+  gameOverClip: {fileID: 8300000, guid: 9ca0ea56193dd5b41b6174c5127c46f1, type: 3}
+  bossAlarmClip: {fileID: 8300000, guid: 78b76dc29ef9ed74ea68cef8f86c5199, type: 3}
+  bossDefeatedClip: {fileID: 8300000, guid: f0001b403111996418cb48e7d3335338, type: 3}
+  shotInterval: 0.09
   fadeTime: 0.6
 --- !u!1 &7346825971093967198
 GameObject:

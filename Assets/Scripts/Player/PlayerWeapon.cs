@@ -42,6 +42,7 @@ public class PlayerWeapon : MonoBehaviour
         }
 
         Fire(weapon);
+        GameEvents.RaisePlayerFired();
         nextFireTime = Time.time + 1f / Mathf.Max(0.01f, weapon.FireRate);
     }
 
