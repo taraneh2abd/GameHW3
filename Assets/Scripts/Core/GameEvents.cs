@@ -15,6 +15,7 @@ public static class GameEvents
     public static event Action BossDefeated;
     public static event Action PlayerHit;
     public static event Action PlayerDied;
+    public static event Action PlayerFired;
     public static event Action<Vector3> EnemyKilled;
     public static event Action EggDropped;
     public static event Action<Vector3> EggBroken;
@@ -36,6 +37,7 @@ public static class GameEvents
     public static void RaiseBossDefeated() => BossDefeated?.Invoke();
     public static void RaisePlayerHit() => PlayerHit?.Invoke();
     public static void RaisePlayerDied() => PlayerDied?.Invoke();
+    public static void RaisePlayerFired() => PlayerFired?.Invoke();
     public static void RaiseEnemyKilled(Vector3 position) => EnemyKilled?.Invoke(position);
     public static void RaiseEggDropped() => EggDropped?.Invoke();
     public static void RaiseEggBroken(Vector3 position) => EggBroken?.Invoke(position);
@@ -60,6 +62,7 @@ public static class GameEvents
         BossDefeated = null;
         PlayerHit = null;
         PlayerDied = null;
+        PlayerFired = null;
         EnemyKilled = null;
         EggDropped = null;
         EggBroken = null;
