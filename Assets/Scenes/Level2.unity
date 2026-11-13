@@ -372,6 +372,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1658387029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1658387033}
+  - component: {fileID: 1658387032}
+  - component: {fileID: 1658387031}
+  - component: {fileID: 1658387030}
+  m_Layer: 0
+  m_Name: Rounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1658387030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658387029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace109ed6bccec440a5618c65003eb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoundManager
+  level: {fileID: 11400000, guid: 063894b8a893ebd44b0833898988775a, type: 2}
+  waveSpawner: {fileID: 1658387032}
+  asteroidSpawner: {fileID: 1658387031}
+  introDelay: 1.5
+  bossSpawnHeight: 2
+--- !u!114 &1658387031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658387029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274028b3806eba74886890bbf4408ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AsteroidSpawner
+  asteroidPrefab: {fileID: 6251855453070294607, guid: e0a88d76012662346a6e7d244359c634, type: 3}
+  baseSpawnInterval: 0.9
+  baseFallSpeed: 2.2
+  minScale: 0.7
+  maxScale: 1.3
+  maxDrift: 0.8
+  maxSpin: 40
+  topMargin: 1.5
+  sideMargin: 1
+--- !u!114 &1658387032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658387029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b348fbd5060b24c9f342e131a1a694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaveSpawner
+  spawnInterval: 0.25
+  entrySpeedUnit: 5
+  dropRateScale: 0.2
+  maxDivers: 2
+--- !u!4 &1658387033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658387029}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2048730987
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,3 +512,4 @@ SceneRoots:
   - {fileID: 66790771}
   - {fileID: 2048730989}
   - {fileID: 57498885}
+  - {fileID: 1658387033}
