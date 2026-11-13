@@ -403,6 +403,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &302904397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 302904399}
+  - component: {fileID: 302904398}
+  m_Layer: 0
+  m_Name: Drops
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &302904398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302904397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fcf4fde106ba2488fce7275c0fdce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropSpawner
+  drumstickPrefab: {fileID: 3684917829903245469, guid: 2bad9279e1ea5d64f8729a43eee392f5, type: 3}
+  burgerPrefab: {fileID: 3676940897279131812, guid: 30daac7f464ad1a428eab4ffa802806d, type: 3}
+  giftBoxPrefab: {fileID: 991697488510578751, guid: 65ff7d426bc2f0b40bc8888ea3570a7a, type: 3}
+  drumstickChance: 0.45
+  burgerChance: 0.15
+  giftBoxChance: 0.05
+  guaranteedGiftBoxKills: 25
+--- !u!4 &302904399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302904397}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &749904920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -504,6 +555,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1744385079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744385081}
+  - component: {fileID: 1744385080}
+  m_Layer: 0
+  m_Name: MissileStrike
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1744385080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744385079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbe497eef262db4d80b5a7723858b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MissileStrike
+  missilePrefab: {fileID: 6817523304605410759, guid: 187a87c300443ed4094ef150e86a97b4, type: 3}
+  blastPrefab: {fileID: 1947250536675069922, guid: d3f9e7e7fcd027743a669918ff6866a4, type: 3}
+  flightTime: 0.4
+--- !u!4 &1744385081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744385079}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -513,3 +611,5 @@ SceneRoots:
   - {fileID: 880181113}
   - {fileID: 749904920}
   - {fileID: 262652808}
+  - {fileID: 302904399}
+  - {fileID: 1744385081}
