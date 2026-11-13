@@ -1,0 +1,554 @@
+fileFormatVersion: 2
+guid: 4c0087db3e41ed3468058c5f10f4b99f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4825351122417083646
+    second: dreadnought_destruction_0
+  - first:
+      213: 190520254366968722
+    second: dreadnought_destruction_1
+  - first:
+      213: 8307200258495638332
+    second: dreadnought_destruction_2
+  - first:
+      213: -1237520668187070028
+    second: dreadnought_destruction_3
+  - first:
+      213: 2150887341656587858
+    second: dreadnought_destruction_4
+  - first:
+      213: -2232351803449102692
+    second: dreadnought_destruction_5
+  - first:
+      213: 7738075925032626176
+    second: dreadnought_destruction_6
+  - first:
+      213: -8926721728900798247
+    second: dreadnought_destruction_7
+  - first:
+      213: -6815782651088069987
+    second: dreadnought_destruction_8
+  - first:
+      213: -7464939881306334861
+    second: dreadnought_destruction_9
+  - first:
+      213: -4596473023921220212
+    second: dreadnought_destruction_10
+  - first:
+      213: 5332418341366293433
+    second: dreadnought_destruction_11
+  - first:
+      213: -4803715247537266626
+    second: dreadnought_destruction_12
+  - first:
+      213: -2281333069406302623
+    second: dreadnought_destruction_13
+  - first:
+      213: 195782795591987176
+    second: dreadnought_destruction_14
+  - first:
+      213: -225200422966854996
+    second: dreadnought_destruction_15
+  - first:
+      213: -7684550676227209625
+    second: dreadnought_destruction_16
+  - first:
+      213: 4611737377126255079
+    second: dreadnought_destruction_17
+  - first:
+      213: -8381628124238979080
+    second: dreadnought_destruction_18
+  - first:
+      213: -8877536066175382195
+    second: dreadnought_destruction_19
+  - first:
+      213: -1042260602405025684
+    second: dreadnought_destruction_20
+  - first:
+      213: 9017428194216805167
+    second: dreadnought_destruction_21
+  - first:
+      213: -3939399724834923054
+    second: dreadnought_destruction_22
+  - first:
+      213: 5531668156137154436
+    second: dreadnought_destruction_23
+  - first:
+      213: -3872065469696787289
+    second: dreadnought_destruction_24
+  - first:
+      213: 8409691207269620842
+    second: dreadnought_destruction_25
+  - first:
+      213: 7631716788475987065
+    second: dreadnought_destruction_26
+  - first:
+      213: 9198861915005572065
+    second: dreadnought_destruction_27
+  - first:
+      213: -2208162189620753619
+    second: dreadnought_destruction_28
+  - first:
+      213: 502086346798816161
+    second: dreadnought_destruction_29
+  - first:
+      213: -3393099452400783340
+    second: dreadnought_destruction_30
+  - first:
+      213: -8027714165923632205
+    second: dreadnought_destruction_31
+  - first:
+      213: -3480868356453510698
+    second: dreadnought_destruction_32
+  - first:
+      213: -5006332067920782347
+    second: dreadnought_destruction_33
+  - first:
+      213: -3679345341373271782
+    second: dreadnought_destruction_34
+  - first:
+      213: 3515062885869728752
+    second: dreadnought_destruction_35
+  - first:
+      213: 1482786393060825495
+    second: dreadnought_destruction_36
+  - first:
+      213: 8778018396071630933
+    second: dreadnought_destruction_37
+  - first:
+      213: 478632008143622743
+    second: dreadnought_destruction_38
+  - first:
+      213: 6652774727941900716
+    second: dreadnought_destruction_39
+  - first:
+      213: 7118802066588126514
+    second: dreadnought_destruction_40
+  - first:
+      213: -3098356195237344054
+    second: dreadnought_destruction_41
+  - first:
+      213: 6759020601124812474
+    second: dreadnought_destruction_42
+  - first:
+      213: -941953247796850334
+    second: dreadnought_destruction_43
+  - first:
+      213: -6645834858469389995
+    second: dreadnought_destruction_44
+  - first:
+      213: -7651756372206314487
+    second: dreadnought_destruction_45
+  - first:
+      213: -362920146484598078
+    second: dreadnought_destruction_46
+  - first:
+      213: -4140587174637870721
+    second: dreadnought_destruction_47
+  - first:
+      213: 6264470129030169571
+    second: dreadnought_destruction_48
+  - first:
+      213: -12318526523241702
+    second: dreadnought_destruction_49
+  - first:
+      213: -4189272440334493299
+    second: dreadnought_destruction_50
+  - first:
+      213: -4634582887007528365
+    second: dreadnought_destruction_51
+  - first:
+      213: 3314143768884974269
+    second: dreadnought_destruction_52
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dreadnought_destruction_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e093193f2ac7244e82598db336ac218
+      internalID: -4825351122417083646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a14daff08679e24dac6c1d2da81a196
+      internalID: 190520254366968722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204e466976845a14f8462bae279f12db
+      internalID: 8307200258495638332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ccda1257b2417e4a8e8f63e7045288e
+      internalID: -1237520668187070028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7b09fdedc134f41846531b2caa047d
+      internalID: 2150887341656587858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a2985392153eb4e86da60a28fe9d38
+      internalID: -2232351803449102692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473db3f287dc23d48b9f806605544a79
+      internalID: 7738075925032626176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1cb7fdbe272a547a9ddccd19c5932d
+      internalID: -8926721728900798247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f9c7d792c609f4699914dc2f423fa8
+      internalID: -6815782651088069987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62319be4b566b4644b079332a24ea25a
+      internalID: -7464939881306334861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3895642a4ff74a448a78a78b692ad5b8
+      internalID: -4596473023921220212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreadnought_destruction_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be33f1c22244a9549aa0fae7db27dba6
+      internalID: 5332418341366293433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 02c5dd831f7a85547b7fc3c2efd9dde0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      dreadnought_destruction_0: -4825351122417083646
+      dreadnought_destruction_1: 190520254366968722
+      dreadnought_destruction_10: -4596473023921220212
+      dreadnought_destruction_11: 5332418341366293433
+      dreadnought_destruction_2: 8307200258495638332
+      dreadnought_destruction_3: -1237520668187070028
+      dreadnought_destruction_4: 2150887341656587858
+      dreadnought_destruction_5: -2232351803449102692
+      dreadnought_destruction_6: 7738075925032626176
+      dreadnought_destruction_7: -8926721728900798247
+      dreadnought_destruction_8: -6815782651088069987
+      dreadnought_destruction_9: -7464939881306334861
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
