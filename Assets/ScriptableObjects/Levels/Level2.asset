@@ -53,6 +53,6 @@ MonoBehaviour:
   - type: 2
     wave: {fileID: 0}
     difficultyMultiplier: 1
-    bossPrefab: {fileID: 0}
+    bossPrefab: {fileID: 1069519993022545574, guid: 9aa3bbd5cae9be74fa09f10278ad537e, type: 3}
     asteroidCount: 0
   nextLevel: {fileID: 11400000, guid: ef13c7571e8337347b59ae13087b355e, type: 2}
