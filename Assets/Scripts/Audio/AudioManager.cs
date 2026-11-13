@@ -25,7 +25,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip gameOverClip;
     [SerializeField] private AudioClip bossAlarmClip;
     [SerializeField] private AudioClip bossDefeatedClip;
+    [SerializeField] private AudioClip[] cluckClips;
     [SerializeField] private float shotInterval = 0.09f;
+    [SerializeField] private float eggCluckInterval = 0.15f;
+    [SerializeField] private float killCluckInterval = 0.06f;
     [SerializeField] private float fadeTime = 0.6f;
 
     private const string MenuSceneName = "MainMenu";
@@ -37,6 +40,8 @@ public class AudioManager : MonoBehaviour
     private bool musicActive;
     private AudioClip pendingClip;
     private float nextShotTime;
+    private float nextEggCluckTime;
+    private float nextKillCluckTime;
     private int lastPowerLevel = 1;
     private int lastMissiles;
 
@@ -108,6 +113,7 @@ public class AudioManager : MonoBehaviour
         GameEvents.MissileLaunched += HandleMissileLaunched;
         GameEvents.MissileDetonated += HandleMissileDetonated;
         GameEvents.EnemyKilled += HandleEnemyKilled;
+        GameEvents.EggDropped += HandleEggDropped;
         GameEvents.PlayerHit += HandlePlayerHit;
         GameEvents.PickupCollected += HandlePickupCollected;
         GameEvents.PowerLevelChanged += HandlePowerLevelChanged;
@@ -132,6 +138,7 @@ public class AudioManager : MonoBehaviour
         GameEvents.MissileLaunched -= HandleMissileLaunched;
         GameEvents.MissileDetonated -= HandleMissileDetonated;
         GameEvents.EnemyKilled -= HandleEnemyKilled;
+        GameEvents.EggDropped -= HandleEggDropped;
         GameEvents.PlayerHit -= HandlePlayerHit;
         GameEvents.PickupCollected -= HandlePickupCollected;
         GameEvents.PowerLevelChanged -= HandlePowerLevelChanged;
@@ -319,6 +326,23 @@ public class AudioManager : MonoBehaviour
     private void HandleEnemyKilled(Vector3 position)
     {
         PlaySfx(RandomClip(killClips), 0.6f, 0.1f);
+
+        if (Time.unscaledTime >= nextKillCluckTime)
+        {
+            nextKillCluckTime = Time.unscaledTime + killCluckInterval;
+            PlaySfx(RandomClip(cluckClips), 0.7f, 0.1f, 1.15f);
+        }
+    }
+
+    private void HandleEggDropped()
+    {
+        if (Time.unscaledTime < nextEggCluckTime)
+        {
+            return;
+        }
+
+        nextEggCluckTime = Time.unscaledTime + eggCluckInterval;
+        PlaySfx(RandomClip(cluckClips), 0.45f, 0.1f);
     }
 
     private void HandlePlayerHit()
