@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb4f8d4e919a6d4a9cf6cff14573472, type: 3}
+  m_Name: Weapon2_Double
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDataSO
+  weaponName: Zapper
+  sprite: {fileID: 6142945684365329812, guid: 38d5ac5bd69afb94fbaf56d0461a3abe, type: 3}
+  bulletPrefab: {fileID: 3057688948544857525, guid: 8199e7a0759a0cc4589acbb6b58e50c9, type: 3}
+  damage: 1
+  bulletSpeed: 13
+  fireRate: 6
+  pattern: 1
