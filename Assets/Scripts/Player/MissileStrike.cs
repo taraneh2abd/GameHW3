@@ -75,7 +75,7 @@ public class MissileStrike : MonoBehaviour
     {
         List<IScreenClearTarget> targets = new List<IScreenClearTarget>();
 
-        foreach (MonoBehaviour behaviour in FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None))
+        foreach (MonoBehaviour behaviour in FindObjectsByType<MonoBehaviour>())
         {
             if (behaviour is IScreenClearTarget target)
             {

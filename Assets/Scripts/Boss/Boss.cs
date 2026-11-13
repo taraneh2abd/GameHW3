@@ -519,7 +519,7 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
 
     private void ClearProjectiles()
     {
-        foreach (BossProjectile projectile in FindObjectsByType<BossProjectile>(FindObjectsSortMode.None))
+        foreach (BossProjectile projectile in FindObjectsByType<BossProjectile>())
         {
             projectile.Release();
         }

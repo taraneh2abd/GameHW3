@@ -53,7 +53,7 @@ public class WaveSpawner : MonoBehaviour
 
         chickens.Clear();
 
-        foreach (Egg egg in FindObjectsByType<Egg>(FindObjectsSortMode.None))
+        foreach (Egg egg in FindObjectsByType<Egg>())
         {
             egg.Release();
         }
