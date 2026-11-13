@@ -1,0 +1,1289 @@
+fileFormatVersion: 2
+guid: 28822f1508ad15c4da7cc05a8b972b0c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3419483655818058745
+    second: rotary_star_0
+  - first:
+      213: -4399077162998256109
+    second: rotary_star_1
+  - first:
+      213: -1174704411568129302
+    second: rotary_star_2
+  - first:
+      213: -5200312230717426225
+    second: rotary_star_3
+  - first:
+      213: 896401670613234319
+    second: rotary_star_4
+  - first:
+      213: 4941735629373237887
+    second: rotary_star_5
+  - first:
+      213: 6578659538779780419
+    second: rotary_star_6
+  - first:
+      213: -756379141507115215
+    second: rotary_star_7
+  - first:
+      213: -4390917952631012743
+    second: rotary_star_8
+  - first:
+      213: 322674461402295581
+    second: rotary_star_9
+  - first:
+      213: 4096916573158568615
+    second: rotary_star_10
+  - first:
+      213: 938851586706986898
+    second: rotary_star_11
+  - first:
+      213: -1512329217278155050
+    second: rotary_star_12
+  - first:
+      213: 4777113399349660781
+    second: rotary_star_13
+  - first:
+      213: -7529562101663800100
+    second: rotary_star_14
+  - first:
+      213: -2380532264757272604
+    second: rotary_star_15
+  - first:
+      213: 3826338930042931890
+    second: rotary_star_16
+  - first:
+      213: -3057629144266449009
+    second: rotary_star_17
+  - first:
+      213: 1071866689203415109
+    second: rotary_star_18
+  - first:
+      213: -3117085416625223693
+    second: rotary_star_19
+  - first:
+      213: -8563931928965525106
+    second: rotary_star_20
+  - first:
+      213: -7952262913287895188
+    second: rotary_star_21
+  - first:
+      213: 2118614100944338172
+    second: rotary_star_22
+  - first:
+      213: -2526557454431671927
+    second: rotary_star_23
+  - first:
+      213: -46013186242256108
+    second: rotary_star_24
+  - first:
+      213: -6082521131158447345
+    second: rotary_star_25
+  - first:
+      213: -9027417887806315075
+    second: rotary_star_26
+  - first:
+      213: 2433027511028003744
+    second: rotary_star_27
+  - first:
+      213: -8942036596757313924
+    second: rotary_star_28
+  - first:
+      213: -4212017590956630558
+    second: rotary_star_29
+  - first:
+      213: -7125396005553076500
+    second: rotary_star_30
+  - first:
+      213: -1644208523522347212
+    second: rotary_star_31
+  - first:
+      213: 6191527212263332091
+    second: rotary_star_32
+  - first:
+      213: 7915062291695251660
+    second: rotary_star_33
+  - first:
+      213: -217894096428548533
+    second: rotary_star_34
+  - first:
+      213: 7010918022050600769
+    second: rotary_star_35
+  - first:
+      213: 8732538295578941648
+    second: rotary_star_36
+  - first:
+      213: -2056506558185772476
+    second: rotary_star_37
+  - first:
+      213: 6129688855040386825
+    second: rotary_star_38
+  - first:
+      213: -3384005253093176721
+    second: rotary_star_39
+  - first:
+      213: -6319381131900971516
+    second: rotary_star_40
+  - first:
+      213: -4928104659664203237
+    second: rotary_star_41
+  - first:
+      213: -4788985702663150927
+    second: rotary_star_42
+  - first:
+      213: 544484894405077863
+    second: rotary_star_43
+  - first:
+      213: 2887578650525356045
+    second: rotary_star_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 36
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rotary_star_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb1a4c8442747f20800000000000000
+      internalID: 3419483655818058745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ea4f7a0a653f2c0800000000000000
+      internalID: -4399077162998256109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeab560cf8c92bfe0800000000000000
+      internalID: -1174704411568129302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_3
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5f7fe1497c4d7b0800000000000000
+      internalID: -5200312230717426225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_4
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82f7f0f198a07c00800000000000000
+      internalID: 896401670613234319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_5
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7aeeaa5f52949440800000000000000
+      internalID: 4941735629373237887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_6
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 345343bcef71c4b50800000000000000
+      internalID: 6578659538779780419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_7
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13714f2ad2dc085f0800000000000000
+      internalID: -756379141507115215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_8
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9720b8bd2635013c0800000000000000
+      internalID: -4390917952631012743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_9
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d69f986be5a7400800000000000000
+      internalID: 322674461402295581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_10
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a2f689baeb2bd830800000000000000
+      internalID: 4096916573158568615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_11
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2975b7a3b88770d00800000000000000
+      internalID: 938851586706986898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_12
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d6e0bce690230be0800000000000000
+      internalID: -1512329217278155050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_13
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ccef39357bb4240800000000000000
+      internalID: 4777113399349660781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_14
+      rect:
+        serializedVersion: 2
+        x: 2620
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4e510792f918790800000000000000
+      internalID: -7529562101663800100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_15
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef59ce8486a6fed0800000000000000
+      internalID: -2380532264757272604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_16
+      rect:
+        serializedVersion: 2
+        x: 3259
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba057bebf2e91530800000000000000
+      internalID: 3826338930042931890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_17
+      rect:
+        serializedVersion: 2
+        x: 3260
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8fdd194e7e1195d0800000000000000
+      internalID: -3057629144266449009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_18
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5482b88231900ee00800000000000000
+      internalID: 1071866689203415109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_19
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7c08f1453edb4d0800000000000000
+      internalID: -3117085416625223693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_20
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e815265c84dc62980800000000000000
+      internalID: -8563931928965525106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_21
+      rect:
+        serializedVersion: 2
+        x: 4530
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6746f46303e3a190800000000000000
+      internalID: -7952262913287895188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_22
+      rect:
+        serializedVersion: 2
+        x: 4539
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfcbbe6cc44d66d10800000000000000
+      internalID: 2118614100944338172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_23
+      rect:
+        serializedVersion: 2
+        x: 4540
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9892cf7a16ddfecd0800000000000000
+      internalID: -2526557454431671927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_24
+      rect:
+        serializedVersion: 2
+        x: 5170
+        y: 287
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413eb0b30478c5ff0800000000000000
+      internalID: -46013186242256108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_25
+      rect:
+        serializedVersion: 2
+        x: 5179
+        y: 281
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b5e7ef14b869ba0800000000000000
+      internalID: -6082521131158447345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_26
+      rect:
+        serializedVersion: 2
+        x: 5180
+        y: 247
+        width: 81
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db52c46a24b28b280800000000000000
+      internalID: -9027417887806315075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_27
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3b39b61a9d3c120800000000000000
+      internalID: 2433027511028003744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_28
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76ccb9971187e380800000000000000
+      internalID: -8942036596757313924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_29
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ed55573158eb85c0800000000000000
+      internalID: -4212017590956630558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_30
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6850db5128d1d90800000000000000
+      internalID: -7125396005553076500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_31
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43fe7ca2f099e29e0800000000000000
+      internalID: -1644208523522347212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_32
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8de180239bce550800000000000000
+      internalID: 6191527212263332091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_33
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0b59fe733f7dd60800000000000000
+      internalID: 7915062291695251660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_34
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4eb8b74972e9fcf0800000000000000
+      internalID: -217894096428548533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_35
+      rect:
+        serializedVersion: 2
+        x: 2684
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147d5bdabc8cb4160800000000000000
+      internalID: 7010918022050600769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_36
+      rect:
+        serializedVersion: 2
+        x: 2699
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d85a771055303970800000000000000
+      internalID: 8732538295578941648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_37
+      rect:
+        serializedVersion: 2
+        x: 3324
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a63116e22d573e0800000000000000
+      internalID: -2056506558185772476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_38
+      rect:
+        serializedVersion: 2
+        x: 3339
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9076a548987011550800000000000000
+      internalID: 6129688855040386825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_39
+      rect:
+        serializedVersion: 2
+        x: 3964
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6a435bc6299901d0800000000000000
+      internalID: -3384005253093176721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_40
+      rect:
+        serializedVersion: 2
+        x: 3979
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4069cb0975c0d48a0800000000000000
+      internalID: -6319381131900971516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_41
+      rect:
+        serializedVersion: 2
+        x: 4604
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1294c81ceadb9bb0800000000000000
+      internalID: -4928104659664203237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_42
+      rect:
+        serializedVersion: 2
+        x: 4619
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2a65660ea1a8db0800000000000000
+      internalID: -4788985702663150927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_43
+      rect:
+        serializedVersion: 2
+        x: 5244
+        y: 276
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ba49c60266e8700800000000000000
+      internalID: 544484894405077863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rotary_star_44
+      rect:
+        serializedVersion: 2
+        x: 5259
+        y: 266
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d00d09dcb7db21820800000000000000
+      internalID: 2887578650525356045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rotary_star_0: 3419483655818058745
+      rotary_star_1: -4399077162998256109
+      rotary_star_10: 4096916573158568615
+      rotary_star_11: 938851586706986898
+      rotary_star_12: -1512329217278155050
+      rotary_star_13: 4777113399349660781
+      rotary_star_14: -7529562101663800100
+      rotary_star_15: -2380532264757272604
+      rotary_star_16: 3826338930042931890
+      rotary_star_17: -3057629144266449009
+      rotary_star_18: 1071866689203415109
+      rotary_star_19: -3117085416625223693
+      rotary_star_2: -1174704411568129302
+      rotary_star_20: -8563931928965525106
+      rotary_star_21: -7952262913287895188
+      rotary_star_22: 2118614100944338172
+      rotary_star_23: -2526557454431671927
+      rotary_star_24: -46013186242256108
+      rotary_star_25: -6082521131158447345
+      rotary_star_26: -9027417887806315075
+      rotary_star_27: 2433027511028003744
+      rotary_star_28: -8942036596757313924
+      rotary_star_29: -4212017590956630558
+      rotary_star_3: -5200312230717426225
+      rotary_star_30: -7125396005553076500
+      rotary_star_31: -1644208523522347212
+      rotary_star_32: 6191527212263332091
+      rotary_star_33: 7915062291695251660
+      rotary_star_34: -217894096428548533
+      rotary_star_35: 7010918022050600769
+      rotary_star_36: 8732538295578941648
+      rotary_star_37: -2056506558185772476
+      rotary_star_38: 6129688855040386825
+      rotary_star_39: -3384005253093176721
+      rotary_star_4: 896401670613234319
+      rotary_star_40: -6319381131900971516
+      rotary_star_41: -4928104659664203237
+      rotary_star_42: -4788985702663150927
+      rotary_star_43: 544484894405077863
+      rotary_star_44: 2887578650525356045
+      rotary_star_5: 4941735629373237887
+      rotary_star_6: 6578659538779780419
+      rotary_star_7: -756379141507115215
+      rotary_star_8: -4390917952631012743
+      rotary_star_9: 322674461402295581
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
