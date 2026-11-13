@@ -17,8 +17,7 @@ MonoBehaviour:
   music: {fileID: 8300000, guid: 6f00c0c17ed043c46845f9325b94dffc, type: 3}
   theme:
     displayName: Earth Orbit
-    backgroundTint: {r: 1, g: 1, b: 1, a: 1}
-    parallaxLayers: []
+    backgroundPrefab: {fileID: 3985376803582337744, guid: bea7d05f1455edd49b6c627ed4756a12, type: 3}
   rounds:
   - type: 0
     wave: {fileID: 11400000, guid: fd758d235487d80449f684cec1a4c8e6, type: 2}
