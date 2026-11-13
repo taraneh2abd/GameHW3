@@ -52,6 +52,27 @@ public static class EntryPath
         return Sample(waypoints);
     }
 
+    public static List<Vector3> BuildDive(Vector3 start, Vector3 playerPosition, Camera cam)
+    {
+        float halfHeight = cam.orthographicSize;
+        float halfWidth = halfHeight * cam.aspect;
+        Vector2 center = cam.transform.position;
+        float swing = start.x <= playerPosition.x ? -1f : 1f;
+
+        float swingX = Mathf.Clamp(start.x + swing * 2.5f, center.x - halfWidth + 0.8f, center.x + halfWidth - 0.8f);
+        float swingY = Mathf.Lerp(start.y, playerPosition.y, 0.35f);
+
+        List<Vector2> waypoints = new List<Vector2>
+        {
+            start,
+            new Vector2(swingX, swingY),
+            playerPosition,
+            new Vector2(playerPosition.x - swing * 1.2f, center.y - halfHeight - OffscreenMargin)
+        };
+
+        return Sample(waypoints);
+    }
+
     public static float Length(IList<Vector3> points)
     {
         float length = 0f;

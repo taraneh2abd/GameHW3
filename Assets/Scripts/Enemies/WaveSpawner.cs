@@ -8,6 +8,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private float spawnInterval = 0.25f;
     [SerializeField] private float entrySpeedUnit = 5f;
     [SerializeField] private float dropRateScale = 0.2f;
+    [SerializeField] private int maxDivers = 2;
 
     private readonly List<Chicken> chickens = new List<Chicken>();
     private Coroutine spawnRoutine;
@@ -15,6 +16,7 @@ public class WaveSpawner : MonoBehaviour
 
     public event Action WaveCleared;
 
+    public int ActiveDivers { get; private set; }
     public int AliveCount => chickens.Count;
     public int RemainingCount => chickens.Count + pendingSpawns;
 
@@ -55,6 +57,22 @@ public class WaveSpawner : MonoBehaviour
         {
             egg.Release();
         }
+    }
+
+    public bool TryAcquireDive()
+    {
+        if (ActiveDivers >= maxDivers)
+        {
+            return false;
+        }
+
+        ActiveDivers++;
+        return true;
+    }
+
+    public void ReleaseDive()
+    {
+        ActiveDivers = Mathf.Max(0, ActiveDivers - 1);
     }
 
     private IEnumerator SpawnRoutine(WaveDataSO wave, float multiplier)
@@ -100,6 +118,12 @@ public class WaveSpawner : MonoBehaviour
         if (dropper != null)
         {
             dropper.SetDropRate(wave.FireRate * multiplier * dropRateScale);
+        }
+
+        ChickenDiver diver = instance.GetComponent<ChickenDiver>();
+        if (diver != null)
+        {
+            diver.Configure(this, wave.DiveBombChance * multiplier, multiplier);
         }
     }
 

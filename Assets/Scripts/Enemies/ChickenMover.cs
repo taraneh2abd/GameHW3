@@ -5,7 +5,8 @@ public enum ChickenState
 {
     Waiting,
     Entering,
-    InFormation
+    InFormation,
+    Diving
 }
 
 [RequireComponent(typeof(Chicken))]
@@ -13,6 +14,7 @@ public class ChickenMover : MonoBehaviour
 {
     private Chicken chicken;
     private Vector3[] path;
+    private Vector3[] returnPath;
     private int nextPoint;
     private float speed;
     private Vector3 slot;
@@ -38,9 +40,20 @@ public class ChickenMover : MonoBehaviour
         chicken.PlayWalk();
     }
 
+    public void BeginDive(Vector3[] divePath, Vector3[] comeBackPath, float diveSpeed)
+    {
+        path = divePath;
+        returnPath = comeBackPath;
+        speed = diveSpeed;
+        nextPoint = 1;
+        transform.position = path[0];
+        State = ChickenState.Diving;
+        chicken.PlayAngry();
+    }
+
     private void Update()
     {
-        if (State == ChickenState.Entering)
+        if (State == ChickenState.Entering || State == ChickenState.Diving)
         {
             FollowPath();
         }
@@ -75,10 +88,28 @@ public class ChickenMover : MonoBehaviour
 
         transform.position = position;
 
-        if (nextPoint >= path.Length)
+        if (nextPoint < path.Length)
+        {
+            return;
+        }
+
+        if (State == ChickenState.Diving)
+        {
+            BeginReturn();
+        }
+        else
         {
             Settle();
         }
+    }
+
+    private void BeginReturn()
+    {
+        path = returnPath;
+        nextPoint = 1;
+        transform.position = path[0];
+        State = ChickenState.Entering;
+        chicken.PlayWalk();
     }
 
     private void Settle()

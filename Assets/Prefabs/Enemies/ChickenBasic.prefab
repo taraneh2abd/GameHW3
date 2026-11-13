@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6553067758368931253}
   - component: {fileID: 6984336682310032220}
   - component: {fileID: 9101522379184911934}
+  - component: {fileID: 997824142681113884}
   - component: {fileID: 1424517580208165520}
   m_Layer: 8
   m_Name: ChickenBasic
@@ -238,6 +239,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec3a78b3fcc70f439baa55fed71a42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Game::ChickenMover
+--- !u!114 &997824142681113884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4514187339210715870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4a1ddfe787e6f40b0f9eaf9ac365fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::ChickenDiver
+  checkInterval: 3
+  baseDiveSpeed: 7
+  diveSpeedMultiplier: 1
 --- !u!114 &1424517580208165520
 MonoBehaviour:
   m_ObjectHideFlags: 0
