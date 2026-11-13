@@ -62,7 +62,7 @@ public class MissileStrike : MonoBehaviour
 
     private Vector3 StartPosition(Camera cam)
     {
-        PlayerController player = FindFirstObjectByType<PlayerController>();
+        PlayerController player = FindAnyObjectByType<PlayerController>();
         if (player != null)
         {
             return player.transform.position;

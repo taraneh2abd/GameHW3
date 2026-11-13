@@ -138,7 +138,7 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         {
             if (player == null)
             {
-                player = FindFirstObjectByType<PlayerHealth>();
+                player = FindAnyObjectByType<PlayerHealth>();
             }
 
             if (player == null)

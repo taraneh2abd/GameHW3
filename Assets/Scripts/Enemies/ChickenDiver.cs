@@ -63,7 +63,7 @@ public class ChickenDiver : MonoBehaviour
 
     private void TryDive()
     {
-        PlayerHealth player = FindFirstObjectByType<PlayerHealth>();
+        PlayerHealth player = FindAnyObjectByType<PlayerHealth>();
         Camera cam = Camera.main;
 
         if (player == null || cam == null || owner == null || !owner.TryAcquireDive())
