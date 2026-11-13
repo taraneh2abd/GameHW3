@@ -7,6 +7,7 @@ public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private float spawnInterval = 0.25f;
     [SerializeField] private float entrySpeedUnit = 5f;
+    [SerializeField] private float dropRateScale = 0.2f;
 
     private readonly List<Chicken> chickens = new List<Chicken>();
     private Coroutine spawnRoutine;
@@ -49,6 +50,11 @@ public class WaveSpawner : MonoBehaviour
         }
 
         chickens.Clear();
+
+        foreach (Egg egg in FindObjectsByType<Egg>(FindObjectsSortMode.None))
+        {
+            egg.Release();
+        }
     }
 
     private IEnumerator SpawnRoutine(WaveDataSO wave, float multiplier)
@@ -89,6 +95,12 @@ public class WaveSpawner : MonoBehaviour
 
         List<Vector3> path = EntryPath.Build(EntryPath.PatternAt(index), slot, cam);
         mover.BeginEntry(path.ToArray(), slot, wave.MoveSpeed * multiplier * entrySpeedUnit);
+
+        EggDropper dropper = instance.GetComponent<EggDropper>();
+        if (dropper != null)
+        {
+            dropper.SetDropRate(wave.FireRate * multiplier * dropRateScale);
+        }
     }
 
     private void HandleChickenDied(Chicken chicken)
