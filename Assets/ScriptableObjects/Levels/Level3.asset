@@ -19,5 +19,55 @@ MonoBehaviour:
     displayName: Deep Galaxy
     backgroundTint: {r: 1, g: 1, b: 1, a: 1}
     parallaxLayers: []
-  rounds: []
+  rounds:
+  - type: 0
+    wave: {fileID: 11400000, guid: b5e50d45648bee24396e31245faddbb9, type: 2}
+    difficultyMultiplier: 1
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 0
+    wave: {fileID: 11400000, guid: 408e6922b0793bc41897e0c2285fff6d, type: 2}
+    difficultyMultiplier: 1
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 0
+    wave: {fileID: 11400000, guid: 408e6922b0793bc41897e0c2285fff6d, type: 2}
+    difficultyMultiplier: 1.2
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 1
+    wave: {fileID: 0}
+    difficultyMultiplier: 1.2
+    bossPrefab: {fileID: 0}
+    asteroidCount: 12
+  - type: 0
+    wave: {fileID: 11400000, guid: 408e6922b0793bc41897e0c2285fff6d, type: 2}
+    difficultyMultiplier: 1.3
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 0
+    wave: {fileID: 11400000, guid: 408e6922b0793bc41897e0c2285fff6d, type: 2}
+    difficultyMultiplier: 1.5
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 1
+    wave: {fileID: 0}
+    difficultyMultiplier: 1.4
+    bossPrefab: {fileID: 0}
+    asteroidCount: 16
+  - type: 0
+    wave: {fileID: 11400000, guid: 408e6922b0793bc41897e0c2285fff6d, type: 2}
+    difficultyMultiplier: 1.6
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 0
+    wave: {fileID: 11400000, guid: 408e6922b0793bc41897e0c2285fff6d, type: 2}
+    difficultyMultiplier: 1.8
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 2
+    wave: {fileID: 0}
+    difficultyMultiplier: 1
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
   nextLevel: {fileID: 0}

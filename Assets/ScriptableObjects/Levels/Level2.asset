@@ -19,5 +19,40 @@ MonoBehaviour:
     displayName: Asteroid Belt
     backgroundTint: {r: 1, g: 1, b: 1, a: 1}
     parallaxLayers: []
-  rounds: []
+  rounds:
+  - type: 0
+    wave: {fileID: 11400000, guid: 5d32ae43ee88f274b86c3e6c6647d092, type: 2}
+    difficultyMultiplier: 1
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 0
+    wave: {fileID: 11400000, guid: dbc6592523a665846a65c9812a9d81cc, type: 2}
+    difficultyMultiplier: 1
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 1
+    wave: {fileID: 0}
+    difficultyMultiplier: 1
+    bossPrefab: {fileID: 0}
+    asteroidCount: 10
+  - type: 0
+    wave: {fileID: 11400000, guid: dbc6592523a665846a65c9812a9d81cc, type: 2}
+    difficultyMultiplier: 1.2
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 0
+    wave: {fileID: 11400000, guid: dbc6592523a665846a65c9812a9d81cc, type: 2}
+    difficultyMultiplier: 1.4
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
+  - type: 1
+    wave: {fileID: 0}
+    difficultyMultiplier: 1.2
+    bossPrefab: {fileID: 0}
+    asteroidCount: 14
+  - type: 2
+    wave: {fileID: 0}
+    difficultyMultiplier: 1
+    bossPrefab: {fileID: 0}
+    asteroidCount: 0
   nextLevel: {fileID: 11400000, guid: ef13c7571e8337347b59ae13087b355e, type: 2}
