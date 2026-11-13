@@ -4,8 +4,13 @@ public class DropSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject drumstickPrefab;
     [SerializeField] private GameObject burgerPrefab;
+    [SerializeField] private GameObject giftBoxPrefab;
     [SerializeField, Range(0f, 1f)] private float drumstickChance = 0.45f;
     [SerializeField, Range(0f, 1f)] private float burgerChance = 0.15f;
+    [SerializeField, Range(0f, 1f)] private float giftBoxChance = 0.05f;
+    [SerializeField] private int guaranteedGiftBoxKills = 25;
+
+    private int killsSinceGiftBox;
 
     private void OnEnable()
     {
@@ -34,10 +39,22 @@ public class DropSpawner : MonoBehaviour
             return;
         }
 
+        killsSinceGiftBox++;
+
         GameObject prefab = ChooseDrop();
+        if (killsSinceGiftBox >= guaranteedGiftBoxKills)
+        {
+            prefab = giftBoxPrefab;
+        }
+
         if (prefab == null)
         {
             return;
+        }
+
+        if (prefab == giftBoxPrefab)
+        {
+            killsSinceGiftBox = 0;
         }
 
         PoolManager.Instance.Get(prefab, position, Quaternion.identity);
@@ -47,6 +64,12 @@ public class DropSpawner : MonoBehaviour
     {
         float roll = Random.value;
 
+        if (roll < giftBoxChance)
+        {
+            return giftBoxPrefab;
+        }
+
+        roll -= giftBoxChance;
         if (roll < burgerChance)
         {
             return burgerPrefab;
