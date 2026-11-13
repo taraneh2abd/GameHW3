@@ -4,13 +4,14 @@ Shader "Game/ParticleGlow"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _Intensity ("Intensity", Float) = 1
+        [HideInInspector] _DstBlend ("Dst Blend", Float) = 1
     }
 
     SubShader
     {
         Tags { "Queue" = "Transparent" "RenderType" = "Transparent" "RenderPipeline" = "UniversalPipeline" }
 
-        Blend SrcAlpha One
+        Blend SrcAlpha [_DstBlend]
         Cull Off
         ZWrite Off
 
