@@ -1229,6 +1229,10 @@ MonoBehaviour:
   - {fileID: 6969280706793261563}
   - {fileID: 8390037427767208089}
   titleMusic: {fileID: 8300000, guid: c8f37d00b94e88546b3f2a7690a735e2, type: 3}
+  bossMusic1: {fileID: 8300000, guid: 7ecdb99f2688ad744b5c911df1898fee, type: 3}
+  bossMusic2: {fileID: 8300000, guid: 600caf5232efe3040950eb9d46041ba3, type: 3}
+  endingMusic: {fileID: 8300000, guid: 0e6ea9d82f68e2a49a3a7894cd66c9e0, type: 3}
+  secondBossLevel: 3
   fadeTime: 0.6
 --- !u!1 &7346825971093967198
 GameObject:

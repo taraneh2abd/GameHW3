@@ -9,6 +9,10 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource[] sfxSources;
     [SerializeField] private AudioClip titleMusic;
+    [SerializeField] private AudioClip bossMusic1;
+    [SerializeField] private AudioClip bossMusic2;
+    [SerializeField] private AudioClip endingMusic;
+    [SerializeField] private int secondBossLevel = 3;
     [SerializeField] private float fadeTime = 0.6f;
 
     private const string MenuSceneName = "MainMenu";
@@ -81,6 +85,9 @@ public class AudioManager : MonoBehaviour
 
         GameSettings.Changed += ApplyVolumes;
         SceneManager.sceneLoaded += HandleSceneLoaded;
+        GameEvents.BossSpawned += HandleBossSpawned;
+        GameEvents.Victory += HandleVictory;
+        GameEvents.GameOver += HandleGameOver;
     }
 
     private void OnDisable()
@@ -92,6 +99,9 @@ public class AudioManager : MonoBehaviour
 
         GameSettings.Changed -= ApplyVolumes;
         SceneManager.sceneLoaded -= HandleSceneLoaded;
+        GameEvents.BossSpawned -= HandleBossSpawned;
+        GameEvents.Victory -= HandleVictory;
+        GameEvents.GameOver -= HandleGameOver;
     }
 
     private void OnDestroy()
@@ -211,6 +221,30 @@ public class AudioManager : MonoBehaviour
         if (scene.name == MenuSceneName)
         {
             PlayMusic(titleMusic);
+            return;
         }
+
+        GameManager manager = GameManager.Instance;
+        if (manager != null && manager.CurrentLevel != null)
+        {
+            PlayMusic(manager.CurrentLevel.Music);
+        }
+    }
+
+    private void HandleBossSpawned(string bossName, int maxHealth)
+    {
+        GameManager manager = GameManager.Instance;
+        int levelNumber = manager != null && manager.CurrentLevel != null ? manager.CurrentLevel.LevelNumber : 1;
+        PlayMusic(levelNumber >= secondBossLevel ? bossMusic2 : bossMusic1);
+    }
+
+    private void HandleVictory()
+    {
+        PlayMusic(endingMusic);
+    }
+
+    private void HandleGameOver()
+    {
+        StopMusic();
     }
 }
