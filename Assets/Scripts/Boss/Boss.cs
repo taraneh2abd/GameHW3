@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
 {
@@ -9,6 +12,7 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     [SerializeField] private float missileMinFraction = 0.15f;
     [SerializeField] private float missileMaxFraction = 0.2f;
     [SerializeField] private float secondPhaseThreshold = 0.65f;
+    [SerializeField] private float enrageThreshold = 0.3f;
 
     [SerializeField] private float hoverTopOffset = 2.4f;
     [SerializeField] private float sideMargin = 2.5f;
@@ -25,6 +29,14 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     [SerializeField] private float curtainInterval = 0.8f;
     [SerializeField] private float curtainSpacing = 1.4f;
     [SerializeField] private float chargeSpeed = 9f;
+    [SerializeField] private float enragedFireScale = 0.55f;
+
+    [SerializeField] private GameObject minionPrefab;
+    [SerializeField] private int minionCount = 4;
+    [SerializeField] private float minionEntrySpeed = 6f;
+    [SerializeField] private float minionDropRate = 0.3f;
+    [SerializeField] private float minionRowOffset = -0.8f;
+    [SerializeField] private float resummonDelay = 6f;
 
     [SerializeField] private SpriteAnimator henAnimator;
     [SerializeField] private Sprite[] idleFrames;
@@ -40,11 +52,14 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     [SerializeField] private float deathDuration = 2f;
 
     private readonly BossStateMachine machine = new BossStateMachine();
+    private readonly List<Chicken> minions = new List<Chicken>();
 
     private BossEnterState enterState;
     private BossBarrageState barrageState;
     private BossSweepState sweepState;
     private BossChargeState chargeState;
+    private BossEnragedState enragedState;
+    private BossDeadState deadState;
 
     private Camera cam;
     private PlayerHealth player;
@@ -78,8 +93,20 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     public float CurtainInterval => curtainInterval;
     public float CurtainSpacing => curtainSpacing;
     public float ChargeSpeed => chargeSpeed;
+    public float EnragedFireScale => enragedFireScale;
+    public float ResummonDelay => resummonDelay;
     public float ExplosionInterval => explosionInterval;
     public float DeathDuration => deathDuration;
+    public int MinionCount => minionCount;
+
+    public int AliveMinions
+    {
+        get
+        {
+            minions.RemoveAll(minion => minion == null || !minion.IsAlive);
+            return minions.Count;
+        }
+    }
 
     private Camera Cam
     {
@@ -139,6 +166,18 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         barrageState = new BossBarrageState(this);
         sweepState = new BossSweepState(this);
         chargeState = new BossChargeState(this);
+        enragedState = new BossEnragedState(this);
+        deadState = new BossDeadState(this);
+    }
+
+    private void OnEnable()
+    {
+        GameEvents.GameOver += HandleGameOver;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.GameOver -= HandleGameOver;
     }
 
     private void Start()
@@ -250,6 +289,29 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         VolleysFired++;
     }
 
+    public void SummonMinions()
+    {
+        if (minionPrefab == null || dead || stopped)
+        {
+            return;
+        }
+
+        int rows = minionCount > 5 ? 2 : 1;
+        int perRow = Mathf.CeilToInt((float)minionCount / rows);
+        float usableHalfWidth = HalfWidth - 1.5f;
+        float spacing = perRow > 1 ? Mathf.Min(1.8f, usableHalfWidth * 2f / (perRow - 1)) : 0f;
+
+        for (int i = 0; i < minionCount; i++)
+        {
+            int row = i / perRow;
+            int column = i % perRow;
+            int inRow = Mathf.Min(perRow, minionCount - row * perRow);
+            float x = CenterX + (column - (inRow - 1) * 0.5f) * spacing;
+            float y = Cam.transform.position.y + minionRowOffset - row * 0.9f;
+            SpawnMinion(new Vector2(x, y), i);
+        }
+    }
+
     public void SetAlert(bool on)
     {
         for (int i = 0; i < renderers.Length; i++)
@@ -293,13 +355,26 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
 
     public void FinishDeath()
     {
+        if (stopped)
+        {
+            return;
+        }
+
+        stopped = true;
         GameEvents.RaiseBossDefeated();
         Destroy(gameObject);
     }
 
     private BossState NextAttackState()
     {
-        if (HealthFraction <= secondPhaseThreshold)
+        float fraction = HealthFraction;
+
+        if (fraction <= enrageThreshold)
+        {
+            return enragedState;
+        }
+
+        if (fraction <= secondPhaseThreshold)
         {
             nextIsSweep = !nextIsSweep;
             return nextIsSweep ? (BossState)sweepState : chargeState;
@@ -335,7 +410,16 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
 
     private void EvaluatePhase()
     {
-        if (HealthFraction <= secondPhaseThreshold && machine.Current == barrageState)
+        float fraction = HealthFraction;
+
+        if (fraction <= enrageThreshold)
+        {
+            if (machine.Current != enragedState)
+            {
+                machine.ChangeState(enragedState);
+            }
+        }
+        else if (fraction <= secondPhaseThreshold && machine.Current == barrageState)
         {
             machine.ChangeState(NextAttackState());
         }
@@ -344,7 +428,6 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
     private void Die()
     {
         dead = true;
-        stopped = true;
         body.enabled = false;
 
         if (GameManager.Instance != null)
@@ -352,38 +435,22 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
             GameManager.Instance.AddScore(scoreValue);
         }
 
-        StartCoroutine(DeathRoutine());
+        ClearMinions();
+        ClearProjectiles();
+        machine.ChangeState(deadState);
     }
 
-    private IEnumerator DeathRoutine()
+    private void HandleGameOver()
     {
-        BeginDeath();
-        float elapsed = 0f;
-        float explosionTimer = 0f;
-        bool burst = false;
-
-        while (elapsed < deathDuration)
+        if (stopped)
         {
-            elapsed += Time.deltaTime;
-            explosionTimer -= Time.deltaTime;
-
-            if (!burst && explosionTimer <= 0f)
-            {
-                SpawnExplosion(1f);
-                explosionTimer = explosionInterval;
-            }
-
-            if (!burst && elapsed >= deathDuration * 0.8f)
-            {
-                burst = true;
-                SpawnExplosion(3f);
-                HideBody();
-            }
-
-            yield return null;
+            return;
         }
 
-        FinishDeath();
+        stopped = true;
+        ClearMinions();
+        ClearProjectiles();
+        Destroy(gameObject);
     }
 
     private void Fire(int prefabIndex, Vector3 position, Vector2 direction, float speed)
@@ -397,6 +464,58 @@ public class Boss : MonoBehaviour, IDamageable, IScreenClearTarget
         GameObject instance = PoolManager.Instance.Get(prefab, position, Quaternion.identity);
         instance.GetComponent<BossProjectile>().Launch(direction, speed);
         ProjectilesFired++;
+    }
+
+    private void SpawnMinion(Vector2 slot, int index)
+    {
+        GameObject instance = Instantiate(minionPrefab);
+        Chicken chicken = instance.GetComponent<Chicken>();
+        ChickenMover mover = instance.GetComponent<ChickenMover>();
+
+        if (chicken == null || mover == null)
+        {
+            throw new InvalidOperationException("Minion prefab needs Chicken and ChickenMover.");
+        }
+
+        chicken.Died += HandleMinionDied;
+        minions.Add(chicken);
+
+        Vector3[] path = EntryPath.Build(EntryPath.PatternAt(index), slot, Cam).ToArray();
+        mover.BeginEntry(path, slot, minionEntrySpeed);
+
+        EggDropper dropper = instance.GetComponent<EggDropper>();
+        if (dropper != null)
+        {
+            dropper.SetDropRate(minionDropRate);
+        }
+    }
+
+    private void HandleMinionDied(Chicken chicken)
+    {
+        chicken.Died -= HandleMinionDied;
+        minions.Remove(chicken);
+    }
+
+    private void ClearMinions()
+    {
+        foreach (Chicken minion in minions)
+        {
+            if (minion != null)
+            {
+                minion.Died -= HandleMinionDied;
+                Destroy(minion.gameObject);
+            }
+        }
+
+        minions.Clear();
+    }
+
+    private void ClearProjectiles()
+    {
+        foreach (BossProjectile projectile in FindObjectsByType<BossProjectile>(FindObjectsSortMode.None))
+        {
+            projectile.Release();
+        }
     }
 
     private void PlayHenAnimation(Sprite[] frames, bool loop)
