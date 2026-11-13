@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 2367816164111534770}
   - component: {fileID: 3616251448361135954}
   - component: {fileID: 1725230461312727520}
+  - component: {fileID: 3068695449036937207}
   m_Layer: 8
   m_Name: Boss2_MechaChicken
   m_TagString: Untagged
@@ -220,6 +221,19 @@ MonoBehaviour:
   explosionInterval: 0.12
   explosionSpread: {x: 2, y: 2}
   deathDuration: 2
+--- !u!114 &3068695449036937207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069519993022545574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a1f98c285b7204c893562a636e708b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::HitFlash
+  duration: 0.08
 --- !u!1 &1192600852992176929
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +292,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 46337caa9bdfb1c429c5de434e5f8d19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -371,7 +385,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 46337caa9bdfb1c429c5de434e5f8d19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -487,7 +501,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 46337caa9bdfb1c429c5de434e5f8d19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

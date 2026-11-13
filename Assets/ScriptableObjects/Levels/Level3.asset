@@ -17,8 +17,7 @@ MonoBehaviour:
   music: {fileID: 8300000, guid: 8c22be69031eedf41b6b682d211de943, type: 3}
   theme:
     displayName: Deep Galaxy
-    backgroundTint: {r: 1, g: 1, b: 1, a: 1}
-    parallaxLayers: []
+    backgroundPrefab: {fileID: 7728317214254517874, guid: 9c73f8dd5a9d2a74688d399f7a2e78be, type: 3}
   rounds:
   - type: 0
     wave: {fileID: 11400000, guid: b5e50d45648bee24396e31245faddbb9, type: 2}

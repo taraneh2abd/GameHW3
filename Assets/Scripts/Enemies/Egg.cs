@@ -54,6 +54,7 @@ public class Egg : MonoBehaviour, IDamageable, IScreenClearTarget
     {
         if (falling)
         {
+            GameEvents.RaiseEggBroken(transform.position);
             Release();
         }
     }
@@ -89,6 +90,7 @@ public class Egg : MonoBehaviour, IDamageable, IScreenClearTarget
         falling = false;
         hitbox.enabled = false;
         spriteRenderer.sprite = brokenSprite;
+        GameEvents.RaiseEggBroken(transform.position);
         yield return new WaitForSeconds(brokenDuration);
         Release();
     }

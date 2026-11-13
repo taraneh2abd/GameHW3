@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8391115497845021546}
   - component: {fileID: 3889881740019002388}
   - component: {fileID: 3015797714003313360}
+  - component: {fileID: 269982552536674770}
   m_Layer: 8
   m_Name: Asteroid
   m_TagString: Untagged
@@ -62,7 +63,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 46337caa9bdfb1c429c5de434e5f8d19, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -200,3 +201,16 @@ MonoBehaviour:
   - {fileID: -423075830917860961, guid: 06779845af084ac46816f439eb9ff0b8, type: 3}
   - {fileID: -7090763116694606770, guid: 06779845af084ac46816f439eb9ff0b8, type: 3}
   - {fileID: 4377718265336669238, guid: 06779845af084ac46816f439eb9ff0b8, type: 3}
+--- !u!114 &269982552536674770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6251855453070294607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a1f98c285b7204c893562a636e708b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::HitFlash
+  duration: 0.08
