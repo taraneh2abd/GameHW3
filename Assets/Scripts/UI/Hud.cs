@@ -8,6 +8,14 @@ public class Hud : MonoBehaviour
     [SerializeField] private Image[] heartIcons;
     [SerializeField] private Text missileText;
     [SerializeField] private RectTransform foodFill;
+    [SerializeField] private GameObject bossGroup;
+    [SerializeField] private Text bossNameText;
+    [SerializeField] private RectTransform bossFill;
+
+    private void Awake()
+    {
+        bossGroup.SetActive(false);
+    }
 
     private void OnEnable()
     {
@@ -16,6 +24,10 @@ public class Hud : MonoBehaviour
         GameEvents.LivesChanged += HandleLivesChanged;
         GameEvents.MissilesChanged += HandleMissilesChanged;
         GameEvents.FoodMeterChanged += HandleFoodChanged;
+        GameEvents.BossSpawned += HandleBossSpawned;
+        GameEvents.BossHealthChanged += HandleBossHealthChanged;
+        GameEvents.BossDefeated += HideBossBar;
+        GameEvents.GameOver += HideBossBar;
     }
 
     private void OnDisable()
@@ -25,6 +37,10 @@ public class Hud : MonoBehaviour
         GameEvents.LivesChanged -= HandleLivesChanged;
         GameEvents.MissilesChanged -= HandleMissilesChanged;
         GameEvents.FoodMeterChanged -= HandleFoodChanged;
+        GameEvents.BossSpawned -= HandleBossSpawned;
+        GameEvents.BossHealthChanged -= HandleBossHealthChanged;
+        GameEvents.BossDefeated -= HideBossBar;
+        GameEvents.GameOver -= HideBossBar;
     }
 
     private void Start()
@@ -67,6 +83,23 @@ public class Hud : MonoBehaviour
     private void HandleFoodChanged(float normalized)
     {
         SetFill(foodFill, normalized);
+    }
+
+    private void HandleBossSpawned(string bossName, int maxHealth)
+    {
+        bossNameText.text = bossName.ToUpper();
+        SetFill(bossFill, 1f);
+        bossGroup.SetActive(true);
+    }
+
+    private void HandleBossHealthChanged(int current, int max)
+    {
+        SetFill(bossFill, max > 0 ? (float)current / max : 0f);
+    }
+
+    private void HideBossBar()
+    {
+        bossGroup.SetActive(false);
     }
 
     private static void SetFill(RectTransform fill, float amount)
