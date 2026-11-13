@@ -1,0 +1,348 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &576414224145539291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5195569267383805433}
+  - component: {fileID: 6193231764117511844}
+  m_Layer: 0
+  m_Name: MidStars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5195569267383805433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576414224145539291}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6883408633003426950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6193231764117511844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576414224145539291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3def0f2adb8f2bd40add121e9c2c5f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::ParallaxLayer
+  sprites:
+  - {fileID: 21300000, guid: 4a516c212fc62ec45a2f931f69ed29b0, type: 3}
+  rotate90: 1
+  tileHorizontally: 1
+  columnShift: 0.382
+  tint: {r: 1, g: 0.9, b: 0.8, a: 0.7}
+  speed: 1.2
+  sortingOrder: -90
+  spriteScale: 1
+  gap: 0
+  xOffset: 0
+  startOffset: 40
+  scatterCount: 0
+  cellHeight: 30
+  scatterScale: {x: 0.5, y: 1}
+  seed: 1
+  coverMargin: 1.5
+  coverAspect: 2.4
+--- !u!1 &5928604753733955322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2401328875042367931}
+  - component: {fileID: 9114417429966712215}
+  m_Layer: 0
+  m_Name: FarSpace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2401328875042367931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5928604753733955322}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6883408633003426950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9114417429966712215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5928604753733955322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3def0f2adb8f2bd40add121e9c2c5f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::ParallaxLayer
+  sprites:
+  - {fileID: 21300000, guid: a46e89d0c20b1d547b42b3dd77a1248d, type: 3}
+  rotate90: 0
+  tileHorizontally: 1
+  columnShift: 0.382
+  tint: {r: 0.8, g: 0.6, b: 0.55, a: 1}
+  speed: 0.5
+  sortingOrder: -100
+  spriteScale: 1
+  gap: 0
+  xOffset: 0
+  startOffset: 0
+  scatterCount: 0
+  cellHeight: 30
+  scatterScale: {x: 0.5, y: 1}
+  seed: 1
+  coverMargin: 1.5
+  coverAspect: 2.4
+--- !u!1 &5981312129695933413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6883408633003426950}
+  m_Layer: 0
+  m_Name: Background_Level2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6883408633003426950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5981312129695933413}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2401328875042367931}
+  - {fileID: 5195569267383805433}
+  - {fileID: 6021281632578179477}
+  - {fileID: 2100244970202815460}
+  - {fileID: 7140981077737390580}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6875919036775573917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7140981077737390580}
+  - component: {fileID: 1792350749990576453}
+  m_Layer: 0
+  m_Name: NearRocks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7140981077737390580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875919036775573917}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6883408633003426950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1792350749990576453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875919036775573917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3def0f2adb8f2bd40add121e9c2c5f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::ParallaxLayer
+  sprites:
+  - {fileID: 21300000, guid: b18d1210b8e4f244d97a4699f07d17c8, type: 3}
+  rotate90: 0
+  tileHorizontally: 1
+  columnShift: 0.382
+  tint: {r: 0.5, g: 0.42, b: 0.42, a: 1}
+  speed: 3.2
+  sortingOrder: -75
+  spriteScale: 1
+  gap: 0
+  xOffset: 0
+  startOffset: 0
+  scatterCount: 10
+  cellHeight: 40
+  scatterScale: {x: 0.3, y: 0.55}
+  seed: 19
+  coverMargin: 1.5
+  coverAspect: 2.4
+--- !u!1 &8473156003456952280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6021281632578179477}
+  - component: {fileID: 7110430529571197582}
+  m_Layer: 0
+  m_Name: GasGiant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6021281632578179477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8473156003456952280}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6883408633003426950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7110430529571197582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8473156003456952280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3def0f2adb8f2bd40add121e9c2c5f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::ParallaxLayer
+  sprites:
+  - {fileID: -2402279469092865779, guid: b6a93dba2768c88468bb065f2e76e773, type: 3}
+  rotate90: 0
+  tileHorizontally: 0
+  columnShift: 0.382
+  tint: {r: 0.85, g: 0.5, b: 0.22, a: 1}
+  speed: 0.18
+  sortingOrder: -85
+  spriteScale: 4.5
+  gap: 28
+  xOffset: 5.5
+  startOffset: 15
+  scatterCount: 0
+  cellHeight: 30
+  scatterScale: {x: 0.5, y: 1}
+  seed: 1
+  coverMargin: 1.5
+  coverAspect: 2.4
+--- !u!1 &8579788599708867464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100244970202815460}
+  - component: {fileID: 5014115921815764860}
+  m_Layer: 0
+  m_Name: FarRocks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2100244970202815460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579788599708867464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6883408633003426950}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5014115921815764860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8579788599708867464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3def0f2adb8f2bd40add121e9c2c5f78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Game::ParallaxLayer
+  sprites:
+  - {fileID: 21300000, guid: b18d1210b8e4f244d97a4699f07d17c8, type: 3}
+  rotate90: 0
+  tileHorizontally: 1
+  columnShift: 0.382
+  tint: {r: 0.4, g: 0.34, b: 0.35, a: 1}
+  speed: 1.8
+  sortingOrder: -80
+  spriteScale: 1
+  gap: 0
+  xOffset: 0
+  startOffset: 0
+  scatterCount: 16
+  cellHeight: 36
+  scatterScale: {x: 0.2, y: 0.4}
+  seed: 7
+  coverMargin: 1.5
+  coverAspect: 2.4

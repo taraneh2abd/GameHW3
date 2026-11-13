@@ -14,6 +14,7 @@ public class Asteroid : MonoBehaviour, IDamageable, IScreenClearTarget
     [SerializeField] private Sprite[] explodeFrames;
 
     private SpriteAnimator animator;
+    private HitFlash hitFlash;
     private Collider2D hitbox;
     private int health;
     private float fallSpeed;
@@ -32,6 +33,7 @@ public class Asteroid : MonoBehaviour, IDamageable, IScreenClearTarget
     private void Awake()
     {
         animator = GetComponent<SpriteAnimator>();
+        hitFlash = GetComponent<HitFlash>();
         hitbox = GetComponent<Collider2D>();
     }
 
@@ -82,6 +84,10 @@ public class Asteroid : MonoBehaviour, IDamageable, IScreenClearTarget
         if (health <= 0)
         {
             StartCoroutine(ExplodeRoutine());
+        }
+        else if (hitFlash != null)
+        {
+            hitFlash.Flash();
         }
     }
 
