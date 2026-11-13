@@ -1,0 +1,503 @@
+fileFormatVersion: 2
+guid: 7f1e4d5f13dae7f4d88a250b677119f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 734953837334566140
+    second: battlecruiser_engine_0
+  - first:
+      213: 2068079317941052337
+    second: battlecruiser_engine_1
+  - first:
+      213: 4358188898228144632
+    second: battlecruiser_engine_2
+  - first:
+      213: 6905480414288606388
+    second: battlecruiser_engine_3
+  - first:
+      213: -5019906980149390381
+    second: battlecruiser_engine_4
+  - first:
+      213: -711736810635300921
+    second: battlecruiser_engine_5
+  - first:
+      213: 8095036622412634404
+    second: battlecruiser_engine_6
+  - first:
+      213: 6550516941388434898
+    second: battlecruiser_engine_7
+  - first:
+      213: 4950958303430572824
+    second: battlecruiser_engine_8
+  - first:
+      213: -8280640672337576995
+    second: battlecruiser_engine_9
+  - first:
+      213: -6388526111660914492
+    second: battlecruiser_engine_10
+  - first:
+      213: -4451422641429136319
+    second: battlecruiser_engine_11
+  - first:
+      213: -7830312021019858752
+    second: battlecruiser_engine_12
+  - first:
+      213: 2922116304621618013
+    second: battlecruiser_engine_13
+  - first:
+      213: 5809575308098326696
+    second: battlecruiser_engine_14
+  - first:
+      213: -3786759920331155469
+    second: battlecruiser_engine_15
+  - first:
+      213: -4204326016306286387
+    second: battlecruiser_engine_16
+  - first:
+      213: -1133972278632020914
+    second: battlecruiser_engine_17
+  - first:
+      213: 2567793578721656608
+    second: battlecruiser_engine_18
+  - first:
+      213: -60377283656506330
+    second: battlecruiser_engine_19
+  - first:
+      213: 1539408028553905543
+    second: battlecruiser_engine_20
+  - first:
+      213: -2759522495666396733
+    second: battlecruiser_engine_21
+  - first:
+      213: -722715117592902368
+    second: battlecruiser_engine_22
+  - first:
+      213: -6401905761680928811
+    second: battlecruiser_engine_23
+  - first:
+      213: -3904647014686748659
+    second: battlecruiser_engine_24
+  - first:
+      213: -8099790886716118347
+    second: battlecruiser_engine_25
+  - first:
+      213: -3718529819396393414
+    second: battlecruiser_engine_26
+  - first:
+      213: -3830712807494150117
+    second: battlecruiser_engine_27
+  - first:
+      213: 4043662996699489937
+    second: battlecruiser_engine_28
+  - first:
+      213: 2731171992843763100
+    second: battlecruiser_engine_29
+  - first:
+      213: -4429439863070011628
+    second: battlecruiser_engine_30
+  - first:
+      213: -2362198971661660593
+    second: battlecruiser_engine_31
+  - first:
+      213: 2684568796547422555
+    second: battlecruiser_engine_32
+  - first:
+      213: 2373998195002533718
+    second: battlecruiser_engine_33
+  - first:
+      213: 3387278378511112201
+    second: battlecruiser_engine_34
+  - first:
+      213: 764096467808721281
+    second: battlecruiser_engine_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: battlecruiser_engine_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db44135e006a42419309a078e5c4bce
+      internalID: 734953837334566140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66e7c2684561d54ca307594445c0c99
+      internalID: 2068079317941052337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4622d76c30077b84b99f49f1763846ae
+      internalID: 4358188898228144632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d3da98887d39345aa39b890ce0654f
+      internalID: 6905480414288606388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb6d6a98eb132f448ef5b25dd92f6fa
+      internalID: -5019906980149390381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e43595bf0d66f4cb23681d77cbca01
+      internalID: -711736810635300921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1054f43e0cf6814db8d20eea8dfefaa
+      internalID: 8095036622412634404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2273fa75616e6f4da0b23cc18acdd5f
+      internalID: 6550516941388434898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b3d3efd67f99341a9bdac4e7766d95
+      internalID: 4950958303430572824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14e15ddaf0848140aa64cec4eb6ffed
+      internalID: -8280640672337576995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2acb1dba470384fbe48235b08424aa
+      internalID: -6388526111660914492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battlecruiser_engine_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a32c6d25ed38bb40b911053ae1dd8d2
+      internalID: -4451422641429136319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fb4ba5ed56474754a86dfc024cf656fe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      battlecruiser_engine_0: 734953837334566140
+      battlecruiser_engine_1: 2068079317941052337
+      battlecruiser_engine_10: -6388526111660914492
+      battlecruiser_engine_11: -4451422641429136319
+      battlecruiser_engine_2: 4358188898228144632
+      battlecruiser_engine_3: 6905480414288606388
+      battlecruiser_engine_4: -5019906980149390381
+      battlecruiser_engine_5: -711736810635300921
+      battlecruiser_engine_6: 8095036622412634404
+      battlecruiser_engine_7: 6550516941388434898
+      battlecruiser_engine_8: 4950958303430572824
+      battlecruiser_engine_9: -8280640672337576995
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
